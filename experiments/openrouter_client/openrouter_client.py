@@ -93,9 +93,20 @@ class OpenRouterClient:
     def text_of(response):
         """Extract the first assistant message text from a chat-completions response."""
         try:
-            return response["choices"][0]["message"]["content"]
+            content = response["choices"][0]["message"]["content"]
         except (KeyError, IndexError, TypeError):
             raise OpenRouterError("response has no choices[0].message.content") from None
+        if isinstance(content, str):
+            return content
+        if isinstance(content, list):
+            parts = []
+            for item in content:
+                if isinstance(item, str):
+                    parts.append(item)
+                elif isinstance(item, dict) and isinstance(item.get("text"), str):
+                    parts.append(item["text"])
+            return "".join(parts)
+        raise OpenRouterError("model response was not text")
 
 
 def _safe_detail(http_error, api_key):

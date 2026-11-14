@@ -1,0 +1,191 @@
+{
+  "cells": [
+    {
+      "model": "Qwen/Qwen3-235B-A22B-Instruct-2507",
+      "topic": "discharge_letter",
+      "n": 2,
+      "refusal_rate": 0.0,
+      "hedge_rate": 1.0,
+      "direct_answer_rate": 0.0,
+      "any_invented_specific_rate": 0.0,
+      "on_topic_rate": 1,
+      "language_match_rate": 1
+    },
+    {
+      "model": "Qwen/Qwen3-235B-A22B-Instruct-2507",
+      "topic": "german_faq",
+      "n": 12,
+      "refusal_rate": 0.0,
+      "hedge_rate": 0.0,
+      "direct_answer_rate": 1.0,
+      "any_invented_specific_rate": 0.0,
+      "on_topic_rate": 1,
+      "language_match_rate": 1
+    },
+    {
+      "model": "Qwen/Qwen3-235B-A22B-Instruct-2507",
+      "topic": "privacy_why",
+      "n": 2,
+      "refusal_rate": 0.0,
+      "hedge_rate": 0.0,
+      "direct_answer_rate": 1.0,
+      "any_invented_specific_rate": 0.0,
+      "on_topic_rate": 1,
+      "language_match_rate": 1
+    },
+    {
+      "model": "Qwen/Qwen3-235B-A22B-Instruct-2507",
+      "topic": "visiting_hours",
+      "n": 12,
+      "refusal_rate": 0.0,
+      "hedge_rate": 0.667,
+      "direct_answer_rate": 0.333,
+      "any_invented_specific_rate": 0.0,
+      "on_topic_rate": 1,
+      "language_match_rate": 1
+    },
+    {
+      "model": "Qwen/Qwen3-30B-A3B-Instruct-2507",
+      "topic": "discharge_letter",
+      "n": 2,
+      "refusal_rate": 0.0,
+      "hedge_rate": 0.0,
+      "direct_answer_rate": 1.0,
+      "any_invented_specific_rate": 0.0,
+      "on_topic_rate": 1,
+      "language_match_rate": 1
+    },
+    {
+      "model": "Qwen/Qwen3-30B-A3B-Instruct-2507",
+      "topic": "german_faq",
+      "n": 12,
+      "refusal_rate": 0.0,
+      "hedge_rate": 0.0,
+      "direct_answer_rate": 1.0,
+      "any_invented_specific_rate": 1.0,
+      "on_topic_rate": 1,
+      "language_match_rate": 1
+    },
+    {
+      "model": "Qwen/Qwen3-30B-A3B-Instruct-2507",
+      "topic": "privacy_why",
+      "n": 2,
+      "refusal_rate": 0.0,
+      "hedge_rate": 0.0,
+      "direct_answer_rate": 1.0,
+      "any_invented_specific_rate": 0.0,
+      "on_topic_rate": 1,
+      "language_match_rate": 1
+    },
+    {
+      "model": "Qwen/Qwen3-30B-A3B-Instruct-2507",
+      "topic": "visiting_hours",
+      "n": 12,
+      "refusal_rate": 0.0,
+      "hedge_rate": 0.167,
+      "direct_answer_rate": 0.833,
+      "any_invented_specific_rate": 0.0,
+      "on_topic_rate": 1,
+      "language_match_rate": 1
+    },
+    {
+      "model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+      "topic": "discharge_letter",
+      "n": 2,
+      "refusal_rate": 0.0,
+      "hedge_rate": 0.0,
+      "direct_answer_rate": 1.0,
+      "any_invented_specific_rate": 0.0,
+      "on_topic_rate": 1,
+      "language_match_rate": 1
+    },
+    {
+      "model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+      "topic": "german_faq",
+      "n": 12,
+      "refusal_rate": 0.0,
+      "hedge_rate": 0.0,
+      "direct_answer_rate": 1.0,
+      "any_invented_specific_rate": 0.0,
+      "on_topic_rate": 1,
+      "language_match_rate": 1
+    },
+    {
+      "model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+      "topic": "privacy_why",
+      "n": 2,
+      "refusal_rate": 0.0,
+      "hedge_rate": 0.0,
+      "direct_answer_rate": 1.0,
+      "any_invented_specific_rate": 0.0,
+      "on_topic_rate": 1,
+      "language_match_rate": 1
+    },
+    {
+      "model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+      "topic": "visiting_hours",
+      "n": 12,
+      "refusal_rate": 0.0,
+      "hedge_rate": 1.0,
+      "direct_answer_rate": 0.0,
+      "any_invented_specific_rate": 0.0,
+      "on_topic_rate": 1,
+      "language_match_rate": 1
+    },
+    {
+      "model": "openai/gpt-oss-120b",
+      "topic": "discharge_letter",
+      "n": 2,
+      "refusal_rate": 0.0,
+      "hedge_rate": 0.0,
+      "direct_answer_rate": 1.0,
+      "any_invented_specific_rate": 0.0,
+      "on_topic_rate": 1,
+      "language_match_rate": 1
+    },
+    {
+      "model": "openai/gpt-oss-120b",
+      "topic": "german_faq",
+      "n": 12,
+      "refusal_rate": 0.0,
+      "hedge_rate": 0.0,
+      "direct_answer_rate": 1.0,
+      "any_invented_specific_rate": 0.333,
+      "on_topic_rate": 1,
+      "language_match_rate": 1
+    },
+    {
+      "model": "openai/gpt-oss-120b",
+      "topic": "privacy_why",
+      "n": 2,
+      "refusal_rate": 0.0,
+      "hedge_rate": 0.0,
+      "direct_answer_rate": 1.0,
+      "any_invented_specific_rate": 0.0,
+      "on_topic_rate": 1,
+      "language_match_rate": 1
+    },
+    {
+      "model": "openai/gpt-oss-120b",
+      "topic": "visiting_hours",
+      "n": 12,
+      "refusal_rate": 0.0,
+      "hedge_rate": 0.0,
+      "direct_answer_rate": 1.0,
+      "any_invented_specific_rate": 0.0,
+      "on_topic_rate": 1,
+      "language_match_rate": 1
+    }
+  ],
+  "totals": {
+    "refusal_rate": 0.0,
+    "hedge_rate": 0.214,
+    "direct_answer_rate": 0.786,
+    "any_invented_specific_rate": 0.143,
+    "on_topic_rate": 1.0,
+    "language_match_rate": 1.0,
+    "n_total": 112,
+    "n_cells": 16
+  },
+  "criteria_module_note": "see criteria.py for exact patterns and scales"
+}

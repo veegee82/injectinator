@@ -9,10 +9,13 @@ import Criteria from "./views/Criteria";
 import Answers from "./views/Answers";
 import Evidences from "./views/Evidences";
 import Timeline from "./views/Timeline";
+import Attacks from "./views/Attacks";
+import { LivePill, Toast } from "./live";
 
 const VIEWS = [
   { id: "overview", label: "Overview", ask: "What do we know?" },
   { id: "timeline", label: "Timeline", ask: "How did we get here?" },
+  { id: "attacks", label: "Attacks", ask: "Did the injection work?" },
   { id: "compare", label: "Compare", ask: "Did the instruction work?" },
   { id: "criteria", label: "Criteria", ask: "Which checks discriminate?" },
   { id: "answers", label: "Answers", ask: "What did the model say?" },
@@ -34,7 +37,8 @@ export default function App() {
       <p>Run <code>npm run build:data</code> in <code>webui/</code> and reload. ({load.message})</p></div>
   );
   const { corpus } = load;
-  const View = { overview: Overview, timeline: Timeline, compare: Compare, criteria: Criteria, answers: Answers, evidence: Evidences }[route.view] ?? Overview;
+  const nActive = corpus.activity.length;
+  const View = { overview: Overview, timeline: Timeline, attacks: Attacks, compare: Compare, criteria: Criteria, answers: Answers, evidence: Evidences }[route.view] ?? Overview;
   return (
     <Ctx.Provider value={{ corpus, open }}>
       <div className="shell">
@@ -44,12 +48,14 @@ export default function App() {
             {VIEWS.map((v) => <a key={v.id} href={href(v.id)} aria-current={route.view === v.id ? "page" : undefined}><b>{v.label}</b><span>{v.ask}</span></a>)}
           </nav>
           <div className="rail-foot">
+            <LivePill live={load.live} onPause={load.setPaused} onRefresh={load.refreshNow} active={nActive} />
             <button className="theme-btn" onClick={() => setTheme(theme === "light" ? "dark" : "light")}>Theme: {theme} — switch</button>
-            <span>Read-only view of <code>{corpus.meta.source_root}</code><br />data built {corpus.meta.generated_at.slice(0, 16).replace("T", " ")} UTC{corpus.meta.git_head && <> · git {corpus.meta.git_head}</>}</span>
+            <span>Read-only view of <code>{corpus.meta.source_root}</code><br />data as of {corpus.meta.generated_at.slice(11, 19)} UTC{corpus.meta.git_head && <> · git {corpus.meta.git_head}</>}</span>
           </div>
         </aside>
         <main className="main"><View route={route} /></main>
       </div>
+      <Toast live={load.live} onDismiss={load.dismiss} />
       {ev && <Drawer ev={ev} onClose={() => setEv(null)} />}
     </Ctx.Provider>
   );

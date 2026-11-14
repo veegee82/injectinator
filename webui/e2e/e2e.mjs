@@ -2,15 +2,17 @@
 // Usage: npm run dev (other shell) && npm run e2e. Exit code 0 only if every assertion holds.
 import { chromium } from "playwright-core";
 import assert from "node:assert/strict";
-import { mkdirSync, readFileSync } from "node:fs";
-
-// Expected values come from the SAME corpus.json the page loads, so live data growth does not break the test.
-const corpus = JSON.parse(readFileSync("public/data/corpus.json", "utf8"));
-const badRuns = corpus.runs.filter((r) => r.manifest.status !== "verified");
+import { mkdirSync } from "node:fs";
 
 const BASE = process.env.BASE_URL ?? "http://127.0.0.1:5173";
 const OUT = process.env.SHOTS ?? "shots";
 mkdirSync(OUT, { recursive: true });
+// Expected values come from the SAME corpus.json the page loads, so live data growth does not break the test.
+const corpus = await (await fetch(`${BASE}/data/corpus.json`)).json(); // the same live endpoint the page polls
+const badRuns = corpus.runs.filter((r) => r.state === "mismatch" || r.state === "unsealed");
+const sealed = corpus.runs.filter((r) => r.state === "sealed").length;
+
+
 const browser = await chromium.launch({ executablePath: process.env.CHROME ?? "/usr/bin/google-chrome", headless: true, args: ["--no-sandbox"] });
 const page = await browser.newPage({ viewport: { width: 1400, height: 1000 } });
 const errors = [];
@@ -69,9 +71,16 @@ await step("answers: filter by hash, expand, invented string is marked", async (
 });
 await step("evidence view reports manifest and cross-check state exactly as the corpus says", async () => {
   await page.goto(`${BASE}/#/evidence`);
-  await page.getByText(badRuns.length === 0 ? `All ${corpus.runs.length} run folders match their manifests` : `${badRuns.length} run folder(s) do not verify`).waitFor();
+  await page.getByText(badRuns.length === 0 ? `All ${sealed} sealed run folders match their manifests` : `${badRuns.length} run folder(s) do not verify`).waitFor();
   await page.getByText(corpus.warnings.length === 0 ? /analysis.json agrees/ : `${corpus.warnings.length} cross-check warning(s)`).waitFor();
+  assert.ok(await page.getByTestId("live-pill").isVisible());
   await page.screenshot({ path: `${OUT}/evidence-light.png`, fullPage: true });
+});
+await step("attacks view shows the honest empty state while there are no trials in the real data", async () => {
+  await page.goto(`${BASE}/#/attacks`);
+  if (corpus.trials.length === 0) await page.getByTestId("attacks-empty").waitFor();
+  else await page.getByTestId("attacks-stats").waitFor();
+  await page.screenshot({ path: `${OUT}/attacks-light.png`, fullPage: true });
 });
 await step("timeline shows iteration 3 as blocked, not as done", async () => {
   await page.goto(`${BASE}/#/timeline`);

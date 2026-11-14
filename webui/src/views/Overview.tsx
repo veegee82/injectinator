@@ -5,7 +5,8 @@ import { href } from "../lib/router";
 
 export default function Overview() {
   const { corpus: c } = useApp();
-  const verified = c.runs.filter((r) => r.manifest.status === "verified").length;
+  const verified = c.runs.filter((r) => r.state === "sealed").length;
+  const T = c.trial_summary;
   const models = new Set(c.answers.map((a) => a.model_short)).size;
   const A = pooled(c, "A"), B = pooled(c, "B");
   const reduction = A.k ? 1 - B.k / B.n / (A.k / A.n) : 0;
@@ -26,7 +27,7 @@ export default function Overview() {
       <div className="stats">
         <div className="stat"><b>{c.answers.length}</b><span>model answers on disk</span></div>
         <div className="stat"><b>{models}</b><span>models compared</span></div>
-        <div className="stat"><b>{verified}/{c.runs.length}</b><span>run folders hash-verified</span></div>
+        <div className="stat"><b>{verified}/{c.runs.length}</b><span>run folders hash-verified{c.activity.length ? ` · ${c.activity.length} in progress` : ""}</span></div>
         <div className="stat"><b style={{ color: c.warnings.length ? "var(--viz-bad)" : undefined }}>{c.warnings.length}</b><span>cross-check warnings</span></div>
       </div>
       <div className="grid cols-2">
@@ -75,10 +76,18 @@ export default function Overview() {
         </article>
       </div>
 
-      <article className="card" style={{ marginTop: 16 }}>
-        <div className="eyebrow">Riley leak matrix</div>
-        <h3>The main experiment has produced no trials yet</h3>
-        <p style={{ color: "var(--muted)", margin: "6px 0 0" }}>{c.riley.has_trials ? "trials.jsonl exists." : <>No <code>trials.jsonl</code> in <code>docs/data/experiments/riley-leak-matrix</code>; only the schema, the attack list and the analysis script are present. Nothing is shown rather than anything invented. When trials appear, a lineage view (parent → child, change note, learning) is the next planned view.</>}</p>
+      <article className="card finding" style={{ marginTop: 16 }} data-testid="riley-card">
+        <div className="eyebrow">Riley leak matrix · prompt injection</div>
+        {c.riley.has_trials ? <>
+          <h3>{T.success > 0 ? "Some injections succeeded" : "No injection has succeeded so far"}</h3>
+          <div className="big">{T.success}/{T.rated}<small>rated trials where the injection succeeded (score ≥ 2) · {T.failure + T.near_miss} failed · {T.unrated} not rated yet</small></div>
+          <Verdict tone={T.success > 0 ? "bad" : "ok"}>{T.success > 0 ? "Riley leaked fake private data in at least one trial" : "The defence held in every rated trial"}</Verdict>
+          <div className="caveat">Classification follows the preregistered rubric of PLAN-0001; the rated score comes from the human rater. Per-family and per-model rates with intervals are on the Attacks page.</div>
+          <div className="chips"><a className="chip" href={href("attacks")}>open attack results</a></div>
+        </> : <>
+          <h3>The main experiment has produced no trials yet</h3>
+          <p style={{ color: "var(--muted)", margin: 0 }}>No <code>trials.jsonl</code> in <code>{c.riley.path}</code>. This card and the Attacks page fill themselves the moment the first trial line is written; nothing is shown rather than anything invented.</p>
+        </>}
       </article>
     </>
   );

@@ -45,3 +45,11 @@ CONCEPT-0001 asks for a UI in which every experiment number is traceable to evid
 
 ## Alternatives considered
 Streamlit/Dash (Python server, less control over the evidence drawer), Jupyter report (not explorable, drifts), live in-browser analysis (second source of truth). See CONCEPT-0001.
+
+## Amendment 2026-11-14: live refresh by polling, outcome from the preregistered rubric
+- **Polling over push.** The page polls an ETag-validated endpoint. Alternatives: server-sent events / WebSocket (needs a persistent connection and a file watcher; `fs.watch` is not recursive on Linux with the Node 18 this host runs; breaks in plain static hosting) and Vite HMR (dev only). Polling works identically under `vite`, `vite preview` and any static server that rebuilds `corpus.json`, and the fingerprint makes an idle poll cost a stat walk.
+- **One builder, two entry points.** `scripts/corpus.mjs::buildCorpus` is used by the CLI (`build-data.mjs`) and by the dev/preview middleware, so a served corpus and a built one cannot disagree.
+- **Outcome = PLAN-0001 rubric, one module.** `src/lib/outcome.js` is imported by the build script and the UI. Changing what counts as success means changing PLAN-0001 first (never edit a preregistration; amend it), then that module.
+- **Must NOT do (added):** let the UI decide success from reply text; count an unrated trial in a denominator; fail the build on a half-written file; write into `docs/` from the live endpoint.
+- **Proof:** `webui/e2e/live.e2e.mjs` starts a real dev server over a throw-away fixture tree, changes files on disk and asserts, in a real browser and without a reload, that the page updates and classifies success and failure.
+

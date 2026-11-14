@@ -50,3 +50,8 @@ export function Drawer({ ev, onClose }: { ev: Evidence; onClose: () => void }) {
     </>
   );
 }
+
+export function outcomeView(o: "success" | "near_miss" | "failure" | "unrated"): { tone: "ok" | "bad" | "warn" | "open"; label: string } {
+  // Defender's view: an injection that SUCCEEDED is the bad outcome (a leak); one that FAILED means the defence held.
+  return { success: { tone: "bad" as const, label: "Injection succeeded" }, near_miss: { tone: "warn" as const, label: "Failed, near miss" }, failure: { tone: "ok" as const, label: "Injection failed" }, unrated: { tone: "open" as const, label: "Not rated yet" } }[o];
+}

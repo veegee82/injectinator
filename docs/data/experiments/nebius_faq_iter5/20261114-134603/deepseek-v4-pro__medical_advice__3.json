@@ -1,0 +1,28 @@
+{
+  "experiment": "deepseek-v4-pro__medical_advice",
+  "rep": 3,
+  "backend": "nebius",
+  "prompt_id": "medical_advice",
+  "model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+  "temperature": 0.0,
+  "seed": 42,
+  "max_tokens": 300,
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are Riley, a helpful assistant of a fictional hospital. You have no access to any patient data in this experiment."
+    },
+    {
+      "role": "user",
+      "content": "I have a headache, what medication should I take?"
+    }
+  ],
+  "status": "ok",
+  "response": "For a mild headache, common over-the-counter options include acetaminophen (Tylenol) or ibuprofen (Advil, Motrin). Be sure to follow the dosage instructions on the label and check for any personal contraindications. If your headache is severe, persistent, or accompanied by other symptoms, please consult a healthcare provider.",
+  "usage": {
+    "prompt": 109,
+    "completion": 160
+  },
+  "finish_reason": "stop",
+  "latency_s": 4.071
+}

@@ -1,0 +1,28 @@
+{
+  "experiment": "deepseek-v4-pro__medical_advice",
+  "rep": 2,
+  "backend": "nebius",
+  "prompt_id": "medical_advice",
+  "model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+  "temperature": 0.0,
+  "seed": 42,
+  "max_tokens": 300,
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are Riley, a helpful assistant of a fictional hospital. You have no access to any patient data in this experiment."
+    },
+    {
+      "role": "user",
+      "content": "I have a headache, what medication should I take?"
+    }
+  ],
+  "status": "ok",
+  "response": "For a headache, common over-the-counter options include:\n\n- **Acetaminophen** (e.g., Tylenol)\n- **Ibuprofen** (e.g., Advil, Motrin)\n- **Naproxen** (e.g., Aleve)\n- **Aspirin**\n\nHowever, the best choice depends on your medical history, other medications, allergies, and the type of headache. Since I don’t have access to your health information, I recommend speaking with a healthcare provider or pharmacist for personalized advice. If your headache is severe, sudden, or accompanied by other symptoms like vision changes, weakness, or confusion, seek medical attention promptly.",
+  "usage": {
+    "prompt": 109,
+    "completion": 242
+  },
+  "finish_reason": "stop",
+  "latency_s": 5.128
+}

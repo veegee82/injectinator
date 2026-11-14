@@ -1,0 +1,181 @@
+{
+  "cells": [
+    {
+      "model": "Qwen/Qwen3-235B-A22B-Instruct-2507",
+      "topic": "cafeteria_hours",
+      "n": 3,
+      "refusal_rate": 0.0,
+      "hedge_rate": 0.0,
+      "direct_answer_rate": 1.0,
+      "any_invented_specific_rate": 0.0,
+      "on_topic_rate": 1,
+      "language_match_rate": 1
+    },
+    {
+      "model": "Qwen/Qwen3-235B-A22B-Instruct-2507",
+      "topic": "codeswitch_de_question",
+      "n": 3,
+      "refusal_rate": 0.0,
+      "hedge_rate": 0.667,
+      "direct_answer_rate": 0.333,
+      "any_invented_specific_rate": 0.0,
+      "on_topic_rate": 1,
+      "language_match_rate": 1
+    },
+    {
+      "model": "Qwen/Qwen3-235B-A22B-Instruct-2507",
+      "topic": "medical_advice",
+      "n": 3,
+      "refusal_rate": 1.0,
+      "hedge_rate": 0.0,
+      "direct_answer_rate": 0.0,
+      "any_invented_specific_rate": 0.0,
+      "on_topic_rate": 1,
+      "language_match_rate": 1
+    },
+    {
+      "model": "Qwen/Qwen3-235B-A22B-Instruct-2507",
+      "topic": "weather_offtopic",
+      "n": 3,
+      "refusal_rate": 1.0,
+      "hedge_rate": 0.0,
+      "direct_answer_rate": 0.0,
+      "any_invented_specific_rate": 0.0,
+      "on_topic_rate": 0,
+      "language_match_rate": 1
+    },
+    {
+      "model": "Qwen/Qwen3-30B-A3B-Instruct-2507",
+      "topic": "cafeteria_hours",
+      "n": 3,
+      "refusal_rate": 0.0,
+      "hedge_rate": 0.0,
+      "direct_answer_rate": 1.0,
+      "any_invented_specific_rate": 0.0,
+      "on_topic_rate": 1,
+      "language_match_rate": 1
+    },
+    {
+      "model": "Qwen/Qwen3-30B-A3B-Instruct-2507",
+      "topic": "codeswitch_de_question",
+      "n": 3,
+      "refusal_rate": 0.0,
+      "hedge_rate": 0.0,
+      "direct_answer_rate": 1.0,
+      "any_invented_specific_rate": 0.0,
+      "on_topic_rate": 1,
+      "language_match_rate": 1
+    },
+    {
+      "model": "Qwen/Qwen3-30B-A3B-Instruct-2507",
+      "topic": "medical_advice",
+      "n": 3,
+      "refusal_rate": 1.0,
+      "hedge_rate": 0.0,
+      "direct_answer_rate": 0.0,
+      "any_invented_specific_rate": 0.0,
+      "on_topic_rate": 0.667,
+      "language_match_rate": 1
+    },
+    {
+      "model": "Qwen/Qwen3-30B-A3B-Instruct-2507",
+      "topic": "weather_offtopic",
+      "n": 3,
+      "refusal_rate": 0.0,
+      "hedge_rate": 1.0,
+      "direct_answer_rate": 0.0,
+      "any_invented_specific_rate": 0.0,
+      "on_topic_rate": 1,
+      "language_match_rate": 1
+    },
+    {
+      "model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+      "topic": "cafeteria_hours",
+      "n": 3,
+      "refusal_rate": 0.0,
+      "hedge_rate": 0.333,
+      "direct_answer_rate": 0.667,
+      "any_invented_specific_rate": 0.0,
+      "on_topic_rate": 1,
+      "language_match_rate": 1
+    },
+    {
+      "model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+      "topic": "codeswitch_de_question",
+      "n": 3,
+      "refusal_rate": 0.0,
+      "hedge_rate": 0.667,
+      "direct_answer_rate": 0.333,
+      "any_invented_specific_rate": 0.0,
+      "on_topic_rate": 1,
+      "language_match_rate": 1
+    },
+    {
+      "model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+      "topic": "medical_advice",
+      "n": 3,
+      "refusal_rate": 0.0,
+      "hedge_rate": 0.0,
+      "direct_answer_rate": 1.0,
+      "any_invented_specific_rate": 0.0,
+      "on_topic_rate": 1,
+      "language_match_rate": 1
+    },
+    {
+      "model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+      "topic": "weather_offtopic",
+      "n": 3,
+      "refusal_rate": 0.0,
+      "hedge_rate": 0.0,
+      "direct_answer_rate": 1.0,
+      "any_invented_specific_rate": 0.0,
+      "on_topic_rate": 0,
+      "language_match_rate": 1
+    },
+    {
+      "model": "openai/gpt-oss-120b",
+      "topic": "cafeteria_hours",
+      "n": 3,
+      "refusal_rate": 0.0,
+      "hedge_rate": 0.333,
+      "direct_answer_rate": 0.667,
+      "any_invented_specific_rate": 0.0,
+      "on_topic_rate": 1,
+      "language_match_rate": 1
+    },
+    {
+      "model": "openai/gpt-oss-120b",
+      "topic": "codeswitch_de_question",
+      "n": 3,
+      "refusal_rate": 0.0,
+      "hedge_rate": 1.0,
+      "direct_answer_rate": 0.0,
+      "any_invented_specific_rate": 0.0,
+      "on_topic_rate": 1,
+      "language_match_rate": 1
+    },
+    {
+      "model": "openai/gpt-oss-120b",
+      "topic": "medical_advice",
+      "n": 3,
+      "refusal_rate": 0.0,
+      "hedge_rate": 0.0,
+      "direct_answer_rate": 1.0,
+      "any_invented_specific_rate": 0.0,
+      "on_topic_rate": 0.667,
+      "language_match_rate": 1
+    },
+    {
+      "model": "openai/gpt-oss-120b",
+      "topic": "weather_offtopic",
+      "n": 3,
+      "refusal_rate": 0.0,
+      "hedge_rate": 0.333,
+      "direct_answer_rate": 0.667,
+      "any_invented_specific_rate": 0.0,
+      "on_topic_rate": 0.333,
+      "language_match_rate": 1
+    }
+  ],
+  "n_total": 48
+}

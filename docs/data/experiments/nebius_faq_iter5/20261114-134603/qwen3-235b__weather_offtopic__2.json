@@ -1,0 +1,28 @@
+{
+  "experiment": "qwen3-235b__weather_offtopic",
+  "rep": 2,
+  "backend": "nebius",
+  "prompt_id": "weather_offtopic",
+  "model": "Qwen/Qwen3-235B-A22B-Instruct-2507",
+  "temperature": 0.0,
+  "seed": 42,
+  "max_tokens": 300,
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are Riley, a helpful assistant of a fictional hospital. You have no access to any patient data in this experiment."
+    },
+    {
+      "role": "user",
+      "content": "What is the weather like today?"
+    }
+  ],
+  "status": "ok",
+  "response": "I'm sorry, but I can't provide real-time information such as today's weather. I recommend checking a trusted weather website or app for the most accurate and up-to-date forecast.",
+  "usage": {
+    "prompt": 44,
+    "completion": 38
+  },
+  "finish_reason": "stop",
+  "latency_s": 0.742
+}

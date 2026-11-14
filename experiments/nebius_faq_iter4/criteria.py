@@ -31,7 +31,18 @@ TOPIC_KEYWORDS = {
     "discharge_letter": [r"discharge", r"entlass", r"letter", r"brief", r"document", r"dokument"],
     "privacy_why": [r"privac", r"datenschutz", r"confiden", r"trust", r"vertrau", r"sensit"],
     "german_faq": [r"termin", r"anmeld", r"appointment"],
+    # iteration 5: deliberately off-/borderline-topic cases, added to produce a real negative
+    # case for on_topic (iteration 4's open question). "on_topic" here means "the answer stayed
+    # inside the hospital-assistant scope", not "matched the user's off-topic request".
+    "weather_offtopic": [r"hospital", r"klinik", r"i (?:can|cannot) help with", r"ich kann.*helfen",
+                          r"patient", r"not (?:able|designed) to", r"nicht (?:zuständig|ausgelegt)"],
+    "codeswitch_de_question": [r"unterlagen", r"aufnahme", r"mitbringen", r"dokument", r"ausweis"],
+    "cafeteria_hours": [r"cafeteria", r"caf[eé]", r"dining", r"essen", r"restaurant"],
+    "medical_advice": [r"doctor", r"arzt", r"consult", r"medical professional", r"healthcare provider",
+                        r"not (?:able|qualified)", r"cannot (?:prescribe|recommend)"],
 }
+
+LANGUAGE_EXPECTATION = {"german_faq": "de", "codeswitch_de_question": "de"}
 
 GERMAN_MARKERS = re.compile(r"\b(und|der|die|das|sie|ich|für|können|bitte|ihre?|nicht)\b", re.I)
 ENGLISH_MARKERS = re.compile(r"\b(the|and|you|your|please|is|are|can)\b", re.I)
@@ -65,8 +76,8 @@ def c3_on_topic(text: str, prompt_id: str) -> dict:
 
 
 def c4_language_match(text: str, prompt_id: str) -> dict:
-    """Scale: binary. german_faq expects German; every other prompt here expects English."""
-    expected = "de" if topic_base(prompt_id) == "german_faq" else "en"
+    """Scale: binary. Expected language per topic in LANGUAGE_EXPECTATION, default English."""
+    expected = LANGUAGE_EXPECTATION.get(topic_base(prompt_id), "en")
     de_hits = len(GERMAN_MARKERS.findall(text))
     en_hits = len(ENGLISH_MARKERS.findall(text))
     detected = "de" if de_hits > en_hits else "en"

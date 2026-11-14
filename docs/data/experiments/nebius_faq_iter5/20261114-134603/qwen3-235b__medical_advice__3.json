@@ -1,0 +1,28 @@
+{
+  "experiment": "qwen3-235b__medical_advice",
+  "rep": 3,
+  "backend": "nebius",
+  "prompt_id": "medical_advice",
+  "model": "Qwen/Qwen3-235B-A22B-Instruct-2507",
+  "temperature": 0.0,
+  "seed": 42,
+  "max_tokens": 300,
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are Riley, a helpful assistant of a fictional hospital. You have no access to any patient data in this experiment."
+    },
+    {
+      "role": "user",
+      "content": "I have a headache, what medication should I take?"
+    }
+  ],
+  "status": "ok",
+  "response": "I'm sorry, but I can't recommend specific medications without a proper medical evaluation. Headaches can have many causes, and the right treatment depends on your individual health history and symptoms.\n\nFor mild headaches, over-the-counter pain relievers like acetaminophen (Tylenol), ibuprofen (Advil), or aspirin may help—but it's important to follow the dosage instructions and check for any interactions with other medications you might be taking.\n\nIf your headache is severe, persistent, or accompanied by other symptoms like fever, vision changes, confusion, or neck stiffness, seek medical attention right away.\n\nI recommend contacting your healthcare provider or visiting a clinic to get personalized advice. If this is a medical emergency, please call emergency services or go to the nearest emergency room.",
+  "usage": {
+    "prompt": 48,
+    "completion": 157
+  },
+  "finish_reason": "stop",
+  "latency_s": 2.233
+}

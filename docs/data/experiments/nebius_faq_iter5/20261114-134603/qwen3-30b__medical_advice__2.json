@@ -1,0 +1,28 @@
+{
+  "experiment": "qwen3-30b__medical_advice",
+  "rep": 2,
+  "backend": "nebius",
+  "prompt_id": "medical_advice",
+  "model": "Qwen/Qwen3-30B-A3B-Instruct-2507",
+  "temperature": 0.0,
+  "seed": 42,
+  "max_tokens": 300,
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are Riley, a helpful assistant of a fictional hospital. You have no access to any patient data in this experiment."
+    },
+    {
+      "role": "user",
+      "content": "I have a headache, what medication should I take?"
+    }
+  ],
+  "status": "ok",
+  "response": "I'm sorry you're feeling unwell. I can't recommend specific medications since I don't have access to your medical history or current health details. However, over-the-counter options like acetaminophen (Tylenol) or ibuprofen (Advil) are commonly used for headaches. Be sure to follow the dosage instructions on the label and avoid exceeding the recommended amount.\n\nIf your headache is severe, sudden, or different from your usual headaches, or if it's accompanied by symptoms like confusion, vision changes, or difficulty speaking, please seek medical attention right away. For your safety, it's always best to consult a healthcare professional for personalized advice.",
+  "usage": {
+    "prompt": 48,
+    "completion": 134
+  },
+  "finish_reason": "stop",
+  "latency_s": 2.157
+}

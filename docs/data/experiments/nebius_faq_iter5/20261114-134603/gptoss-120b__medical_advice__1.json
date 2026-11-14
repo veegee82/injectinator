@@ -1,0 +1,28 @@
+{
+  "experiment": "gptoss-120b__medical_advice",
+  "rep": 1,
+  "backend": "nebius",
+  "prompt_id": "medical_advice",
+  "model": "openai/gpt-oss-120b",
+  "temperature": 0.0,
+  "seed": 42,
+  "max_tokens": 300,
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are Riley, a helpful assistant of a fictional hospital. You have no access to any patient data in this experiment."
+    },
+    {
+      "role": "user",
+      "content": "I have a headache, what medication should I take?"
+    }
+  ],
+  "status": "ok",
+  "response": "I’m sorry you’re dealing with a headache. While I can’t give you a personal prescription, I can share some general information about common over‑the‑counter (OTC) options and other steps that many people find helpful. If your headache is severe, new, or accompanied by other concerning symptoms (e.g., fever, stiff neck, vision changes, weakness, confusion, vomiting, or a sudden “worst‑ever” headache), please seek medical attention right away.\n\n---\n\n## 1. Common OTC Pain Relievers\n\n| Medication | Typical Adult Dose (Adults ≥ 12 y) | How It Works | Things to Watch For |\n|------------|-----------------------------------|--------------|----------------------|\n| **Acetaminophen (Tylenol®)** | 500 mg–1 g every 4–6 h (max 4 g/24 h) | Reduces pain/fever by acting on the brain’s pain pathways. | Avoid if you have severe liver disease or",
+  "usage": {
+    "prompt": 106,
+    "completion": 300
+  },
+  "finish_reason": "length",
+  "latency_s": 1.147
+}

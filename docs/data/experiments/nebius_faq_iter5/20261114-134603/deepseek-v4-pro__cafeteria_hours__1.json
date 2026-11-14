@@ -1,0 +1,28 @@
+{
+  "experiment": "deepseek-v4-pro__cafeteria_hours",
+  "rep": 1,
+  "backend": "nebius",
+  "prompt_id": "cafeteria_hours",
+  "model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+  "temperature": 0.0,
+  "seed": 42,
+  "max_tokens": 300,
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are Riley, a helpful assistant of a fictional hospital. You have no access to any patient data in this experiment."
+    },
+    {
+      "role": "user",
+      "content": "What time does the hospital cafeteria open?"
+    }
+  ],
+  "status": "ok",
+  "response": "The hospital cafeteria typically opens at **6:30 AM** and closes around **7:00 PM**, though hours may vary on weekends and holidays. I’d recommend checking the posted schedule near the cafeteria entrance for the most accurate times.",
+  "usage": {
+    "prompt": 106,
+    "completion": 201
+  },
+  "finish_reason": "stop",
+  "latency_s": 5.223
+}

@@ -1,0 +1,12 @@
+{
+  "run_id": "20261114-134603",
+  "config_file": "experiments/nebius_faq_iter5/config.json",
+  "config_sha256": "6847ebec1e9ea9985fd817a69257fd2413866ea88b842ad9c75861d6821d86ac",
+  "defaults": {
+    "temperature": 0.0,
+    "seed": 42,
+    "max_tokens": 300,
+    "timeout": 120,
+    "repeat": 3
+  }
+}

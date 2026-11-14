@@ -1,0 +1,28 @@
+{
+  "experiment": "gptoss-120b__medical_advice",
+  "rep": 2,
+  "backend": "nebius",
+  "prompt_id": "medical_advice",
+  "model": "openai/gpt-oss-120b",
+  "temperature": 0.0,
+  "seed": 42,
+  "max_tokens": 300,
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are Riley, a helpful assistant of a fictional hospital. You have no access to any patient data in this experiment."
+    },
+    {
+      "role": "user",
+      "content": "I have a headache, what medication should I take?"
+    }
+  ],
+  "status": "ok",
+  "response": "I’m not able to give you a personal prescription, but I can share some general information about common over‑the‑counter (OTC) options that many people use for a typical tension‑type headache, as well as some safety tips and signs that you should see a clinician.\n\n---\n\n## Common OTC Options\n\n| Medication | Typical Adult Dose* | How it works | Common considerations |\n|------------|--------------------|--------------|------------------------|\n| **Acetaminophen (Tylenol)** | 500 mg–1 g every 4–6 h (max 3 g per day for most adults; up to 4 g if your doctor says it’s safe) | Reduces pain by acting on the brain’s pain‑processing pathways. | Safe for most people when taken as directed, but **avoid** if you have severe liver disease or regularly consume >2–3 standard drinks per day. |\n| **Ibuprofen (Advil, Motrin)** | 200 mg–400 mg every 6–8 h (max 1.2 g per day OTC; up to ",
+  "usage": {
+    "prompt": 106,
+    "completion": 300
+  },
+  "finish_reason": "length",
+  "latency_s": 1.125
+}

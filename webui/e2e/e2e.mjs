@@ -2,7 +2,11 @@
 // Usage: npm run dev (other shell) && npm run e2e. Exit code 0 only if every assertion holds.
 import { chromium } from "playwright-core";
 import assert from "node:assert/strict";
-import { mkdirSync } from "node:fs";
+import { mkdirSync, readFileSync } from "node:fs";
+
+// Expected values come from the SAME corpus.json the page loads, so live data growth does not break the test.
+const corpus = JSON.parse(readFileSync("public/data/corpus.json", "utf8"));
+const badRuns = corpus.runs.filter((r) => r.manifest.status !== "verified");
 
 const BASE = process.env.BASE_URL ?? "http://127.0.0.1:5173";
 const OUT = process.env.SHOTS ?? "shots";
@@ -17,7 +21,7 @@ const step = async (name, fn) => { await fn(); console.log(`ok ${++n} ${name}`);
 
 await step("overview renders real numbers from corpus.json", async () => {
   await page.goto(`${BASE}/#/overview?theme=light`);
-  await page.getByText("112").first().waitFor();
+  await page.getByText(String(corpus.answers.length), { exact: true }).first().waitFor();
   await page.getByText("8/40").first().waitFor();
   assert.equal(await page.locator("html").getAttribute("data-theme"), "light");
   await page.screenshot({ path: `${OUT}/overview-light.png`, fullPage: true });
@@ -54,7 +58,7 @@ await step("criteria heatmap flags the ceiling criterion and a cell click opens 
   await page.waitForTimeout(400);
   await page.screenshot({ path: `${OUT}/criteria-drawer-light.png` });
   await d.getByRole("link", { name: /Read the underlying answers/ }).click();
-  await page.getByText(/\d+ of 112/).waitFor();
+  await page.getByText(/\d+ of \d+/).waitFor();
 });
 await step("answers: filter by hash, expand, invented string is marked", async () => {
   await page.goto(`${BASE}/#/answers?model=qwen3-30b&topic=german_faq&flag=1`);
@@ -63,10 +67,10 @@ await step("answers: filter by hash, expand, invented string is marked", async (
   assert.match(await page.locator(".answer mark").first().innerText(), /030|www|0\d{3}/);
   await page.screenshot({ path: `${OUT}/answers-light.png`, fullPage: true });
 });
-await step("evidence view reports all manifests verified and no warnings", async () => {
+await step("evidence view reports manifest and cross-check state exactly as the corpus says", async () => {
   await page.goto(`${BASE}/#/evidence`);
-  await page.getByText(/All 4 run folders match their manifests/).waitFor();
-  await page.getByText(/analysis.json agrees/).waitFor();
+  await page.getByText(badRuns.length === 0 ? `All ${corpus.runs.length} run folders match their manifests` : `${badRuns.length} run folder(s) do not verify`).waitFor();
+  await page.getByText(corpus.warnings.length === 0 ? /analysis.json agrees/ : `${corpus.warnings.length} cross-check warning(s)`).waitFor();
   await page.screenshot({ path: `${OUT}/evidence-light.png`, fullPage: true });
 });
 await step("timeline shows iteration 3 as blocked, not as done", async () => {

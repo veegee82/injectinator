@@ -1,0 +1,5 @@
+{"actor": "operator", "file": "kb/initiatives/I-01-injectinator.md", "id": "I-01", "op": "new", "ts": "2026-11-14T10:07:38+00:00", "type": "initiative", "uid": "01M7CRDS0Q13FNZ8NRYFD6YP74"}
+{"actor": "operator", "file": "kb/epics/E-001-setup.md", "id": "E-001", "op": "new", "ts": "2026-11-14T10:07:38+00:00", "type": "epic", "uid": "01M7CRDS7CF10Z3M9K7CD0MWRV"}
+{"actor": "operator", "file": "kb/tasks/T-0001-record-the-data-sources.md", "id": "T-0001", "op": "new", "ts": "2026-11-14T10:07:38+00:00", "type": "task", "uid": "01M7CRDSDV3XRWMFNM94E2RKK2"}
+{"actor": "operator", "file": "kb/tasks/T-0002-write-the-first-report.md", "id": "T-0002", "op": "new", "ts": "2026-11-14T10:07:39+00:00", "type": "task", "uid": "01M7CRDSMHEAMGRE9SM76G9TNE"}
+{"actor": "operator", "file": "kb/tasks/T-0003-capture-the-project-goal-and-audience-as-an-idea.md", "id": "T-0003", "op": "new", "ts": "2026-11-14T10:07:39+00:00", "type": "task", "uid": "01M7CRDSV0Y3NMYTQFR52R19P2"}

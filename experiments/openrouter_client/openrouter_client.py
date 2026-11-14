@@ -35,14 +35,16 @@ def read_api_key(environ=None):
 
 class OpenRouterClient:
     def __init__(self, api_key=None, *, endpoint=ENDPOINT, timeout=60.0,
-                 max_retries=3, backoff_base=1.0, sleep=time.sleep, opener=urllib.request.urlopen):
+                 max_retries=3, backoff_base=1.0, sleep=time.sleep, opener=None):
         self._api_key = api_key if api_key is not None else read_api_key()
         self.endpoint = endpoint
         self.timeout = timeout
         self.max_retries = max_retries
         self.backoff_base = backoff_base
         self._sleep = sleep
-        self._opener = opener
+        # Resolve urlopen at construction time, not at import time, so a patched
+        # urllib.request.urlopen (tests) is honoured and no real request is made by accident.
+        self._opener = opener if opener is not None else urllib.request.urlopen
 
     def __repr__(self):  # never expose the key in repr/logs
         return f"OpenRouterClient(endpoint={self.endpoint!r}, key=<redacted>)"

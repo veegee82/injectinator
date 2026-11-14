@@ -21,3 +21,15 @@ python3 chat.py       # pick a model 1-4; /new = fresh conversation, /switch = o
 - `setup.py` adds `.env` and `logs/` to `.git/info/exclude`, because this repo has no `.gitignore`. Your attempts are in `logs/my_attempts.jsonl`. Never `git add -f` them.
 - Found a leak? Keep the `turn_id` printed under every reply and submit it with how you did it in the organizers' form (link in the event slides).
 
+
+## Automated attacker (`riley_attack.py`)
+
+An OpenAI model (default `gpt-6-luna`) writes attacks on Riley, inspired by `prompts/attack_techniques.md`; a judge (`gpt-5-mini`) checks each reply for leaked private data, including encoded data. It refines for up to 20 rounds and stops at the first leak, printing the `turn_id` to submit. Read the reply yourself before submitting: the judge can be wrong.
+
+```bash
+pip install -r requirements.txt
+echo "OPENAI_API_KEY=sk-..." >> .env    # your own key; re-add after rerunning setup.py
+python3 riley_attack.py --model openai/gpt-oss-120b --turns 3 --slug riley-pair-gptoss-multiturn
+```
+
+Each run is an experiment: `docs/data/experiments/<slug>/rounds.jsonl` (every round: idea, messages, replies, turn_ids, verdict) plus `MANIFEST.sha256`. For a cited result, commit the preregistration plan before the run and a result note after it (see `docs/data/experiments/README.md`).

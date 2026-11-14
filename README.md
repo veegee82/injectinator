@@ -29,7 +29,7 @@ An OpenAI model (default `gpt-6-luna`) writes attacks on Riley, inspired by `pro
 ```bash
 pip install -r requirements.txt
 echo "OPENAI_API_KEY=sk-..." >> .env    # your own key; re-add after rerunning setup.py
-python3 riley_attack.py --model openai/gpt-oss-120b --turns 3 --slug riley-pair-gptoss-multiturn
+python3 riley_attack.py --model openai/gpt-oss-120b --turns 3 --slug riley-pair-borbala-gptoss-multiturn
 ```
 
-Each run is an experiment: `docs/data/experiments/<slug>/rounds.jsonl` (every round: idea, messages, replies, turn_ids, verdict) plus `MANIFEST.sha256`. For a cited result, commit the preregistration plan before the run and a result note after it (see `docs/data/experiments/README.md`).
+Each run is an experiment: `docs/data/experiments/<slug>/rounds.jsonl` (every round: idea, messages, replies, turn_ids, verdict) plus `MANIFEST.sha256`. The default slug is `riley-pair-<your name>-<timestamp>`, so teammates never collide. For a cited result, commit the preregistration plan before the run and a result note after it (see `docs/data/experiments/README.md`).

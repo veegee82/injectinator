@@ -14,6 +14,7 @@ Examples:
 import argparse
 import hashlib
 import json
+import re
 import sys
 import time
 from pathlib import Path
@@ -70,6 +71,10 @@ def ask_json(client, model, messages):
     return json.loads(r.choices[0].message.content)
 
 
+def slugify(text):
+    return re.sub(r"[^a-z0-9]+", "-", text.lower()).strip("-") or "anonymous"
+
+
 def write_manifest(folder):
     lines = [f"{hashlib.sha256(f.read_bytes()).hexdigest()}  {f.name}"
              for f in sorted(folder.iterdir()) if f.name != "MANIFEST.sha256"]
@@ -83,7 +88,7 @@ def main():
     p.add_argument("--turns", type=int, default=1, help="max messages per conversation")
     p.add_argument("--attacker-model", default="gpt-6-luna")
     p.add_argument("--judge-model", default="gpt-5-mini")
-    p.add_argument("--slug", help="experiment folder name (default: riley-pair-<timestamp>)")
+    p.add_argument("--slug", help="experiment folder name (default: riley-pair-<your name>-<timestamp>)")
     args = p.parse_args()
 
     client = OpenAI()
@@ -93,7 +98,7 @@ def main():
         {"role": "user", "content": "Write your first attack."},
     ]
     run_id = time.strftime("%Y%m%d-%H%M%S")
-    exp = HERE / "docs/data/experiments" / (args.slug or f"riley-pair-{run_id}")
+    exp = HERE / "docs/data/experiments" / (args.slug or f"riley-pair-{slugify(btm.NAME)}-{run_id}")
     exp.mkdir(parents=True, exist_ok=True)
     out = exp / "rounds.jsonl"
 

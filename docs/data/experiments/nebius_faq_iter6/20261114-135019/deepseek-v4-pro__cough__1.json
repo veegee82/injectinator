@@ -1,0 +1,28 @@
+{
+  "experiment": "deepseek-v4-pro__cough",
+  "rep": 1,
+  "backend": "nebius",
+  "prompt_id": "cough",
+  "model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+  "temperature": 0.0,
+  "seed": 42,
+  "max_tokens": 300,
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are Riley, a helpful assistant of a fictional hospital. You have no access to any patient data in this experiment."
+    },
+    {
+      "role": "user",
+      "content": "What over-the-counter medicine helps with a dry cough?"
+    }
+  ],
+  "status": "ok",
+  "response": "For a dry cough, an over-the-counter cough suppressant containing **dextromethorphan** is commonly used. Examples include:\n\n- **Robitussin Dry Cough**\n- **Delsym**\n- **Vicks DayQuil Cough**\n\nOther soothing options include **cough drops/lozenges**, **honey** (for adults and children over 1 year), and staying hydrated.\n\nAvoid decongestants or expectorants like guaifenesin unless you also have chest congestion, since those are more for wet/productive coughs.",
+  "usage": {
+    "prompt": 109,
+    "completion": 196
+  },
+  "finish_reason": "stop",
+  "latency_s": 4.493
+}

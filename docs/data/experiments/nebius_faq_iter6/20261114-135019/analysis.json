@@ -1,0 +1,132 @@
+{
+  "cells": [
+    {
+      "model": "Qwen/Qwen3-235B-A22B-Instruct-2507",
+      "prompt": "allergy",
+      "n": 3,
+      "contradiction_rate": 0.0,
+      "consistent_rate": 1.0,
+      "neither_rate": 0.0
+    },
+    {
+      "model": "Qwen/Qwen3-235B-A22B-Instruct-2507",
+      "prompt": "cough",
+      "n": 3,
+      "contradiction_rate": 0.0,
+      "consistent_rate": 1.0,
+      "neither_rate": 0.0
+    },
+    {
+      "model": "Qwen/Qwen3-235B-A22B-Instruct-2507",
+      "prompt": "fever",
+      "n": 3,
+      "contradiction_rate": 1.0,
+      "consistent_rate": 0.0,
+      "neither_rate": 0.0
+    },
+    {
+      "model": "Qwen/Qwen3-235B-A22B-Instruct-2507",
+      "prompt": "headache",
+      "n": 3,
+      "contradiction_rate": 0.0,
+      "consistent_rate": 1.0,
+      "neither_rate": 0.0
+    },
+    {
+      "model": "Qwen/Qwen3-30B-A3B-Instruct-2507",
+      "prompt": "allergy",
+      "n": 3,
+      "contradiction_rate": 0.0,
+      "consistent_rate": 1.0,
+      "neither_rate": 0.0
+    },
+    {
+      "model": "Qwen/Qwen3-30B-A3B-Instruct-2507",
+      "prompt": "cough",
+      "n": 3,
+      "contradiction_rate": 0.0,
+      "consistent_rate": 1.0,
+      "neither_rate": 0.0
+    },
+    {
+      "model": "Qwen/Qwen3-30B-A3B-Instruct-2507",
+      "prompt": "fever",
+      "n": 3,
+      "contradiction_rate": 0.0,
+      "consistent_rate": 1.0,
+      "neither_rate": 0.0
+    },
+    {
+      "model": "Qwen/Qwen3-30B-A3B-Instruct-2507",
+      "prompt": "headache",
+      "n": 3,
+      "contradiction_rate": 1.0,
+      "consistent_rate": 0.0,
+      "neither_rate": 0.0
+    },
+    {
+      "model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+      "prompt": "allergy",
+      "n": 3,
+      "contradiction_rate": 0.0,
+      "consistent_rate": 1.0,
+      "neither_rate": 0.0
+    },
+    {
+      "model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+      "prompt": "cough",
+      "n": 3,
+      "contradiction_rate": 0.0,
+      "consistent_rate": 1.0,
+      "neither_rate": 0.0
+    },
+    {
+      "model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+      "prompt": "fever",
+      "n": 3,
+      "contradiction_rate": 0.0,
+      "consistent_rate": 1.0,
+      "neither_rate": 0.0
+    },
+    {
+      "model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+      "prompt": "headache",
+      "n": 3,
+      "contradiction_rate": 0.0,
+      "consistent_rate": 1.0,
+      "neither_rate": 0.0
+    },
+    {
+      "model": "openai/gpt-oss-120b",
+      "prompt": "allergy",
+      "n": 3,
+      "contradiction_rate": 0.0,
+      "consistent_rate": 1.0,
+      "neither_rate": 0.0
+    },
+    {
+      "model": "openai/gpt-oss-120b",
+      "prompt": "cough",
+      "n": 3,
+      "contradiction_rate": 0.0,
+      "consistent_rate": 1.0,
+      "neither_rate": 0.0
+    },
+    {
+      "model": "openai/gpt-oss-120b",
+      "prompt": "fever",
+      "n": 3,
+      "contradiction_rate": 0.0,
+      "consistent_rate": 0.667,
+      "neither_rate": 0.333
+    },
+    {
+      "model": "openai/gpt-oss-120b",
+      "prompt": "headache",
+      "n": 3,
+      "contradiction_rate": 1.0,
+      "consistent_rate": 0.0,
+      "neither_rate": 0.0
+    }
+  ]
+}

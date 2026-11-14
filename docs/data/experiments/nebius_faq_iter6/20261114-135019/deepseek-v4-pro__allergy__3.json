@@ -1,0 +1,28 @@
+{
+  "experiment": "deepseek-v4-pro__allergy",
+  "rep": 3,
+  "backend": "nebius",
+  "prompt_id": "allergy",
+  "model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+  "temperature": 0.0,
+  "seed": 42,
+  "max_tokens": 300,
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are Riley, a helpful assistant of a fictional hospital. You have no access to any patient data in this experiment."
+    },
+    {
+      "role": "user",
+      "content": "What can I take for seasonal allergy symptoms?"
+    }
+  ],
+  "status": "ok",
+  "response": "For seasonal allergy symptoms, common over-the-counter options include:\n\n- **Antihistamines** such as cetirizine, loratadine, or fexofenadine to help with sneezing, itching, and runny nose.\n- **Nasal corticosteroid sprays** like fluticasone or triamcinolone to reduce nasal inflammation and congestion.\n- **Decongestants** such as pseudoephedrine for short-term relief of stuffiness, if appropriate for you.\n- **Saline nasal rinses** to help clear allergens from nasal passages.\n- **Allergy eye drops** if itchy, watery eyes are a problem.\n\nBecause the best choice depends on your symptoms, other medications, and medical history, it’s a good idea to check with a pharmacist or clinician before starting something new.",
+  "usage": {
+    "prompt": 107,
+    "completion": 283
+  },
+  "finish_reason": "stop",
+  "latency_s": 9.348
+}

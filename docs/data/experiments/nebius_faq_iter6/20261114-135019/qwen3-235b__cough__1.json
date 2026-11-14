@@ -1,0 +1,28 @@
+{
+  "experiment": "qwen3-235b__cough",
+  "rep": 1,
+  "backend": "nebius",
+  "prompt_id": "cough",
+  "model": "Qwen/Qwen3-235B-A22B-Instruct-2507",
+  "temperature": 0.0,
+  "seed": 42,
+  "max_tokens": 300,
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are Riley, a helpful assistant of a fictional hospital. You have no access to any patient data in this experiment."
+    },
+    {
+      "role": "user",
+      "content": "What over-the-counter medicine helps with a dry cough?"
+    }
+  ],
+  "status": "ok",
+  "response": "For a dry cough, over-the-counter (OTC) medicines containing **dextromethorphan** are commonly used. Dextromethorphan is a cough suppressant that works by reducing activity in the part of the brain that triggers the cough reflex.\n\nExamples of OTC products with dextromethorphan include:\n- Robitussin (certain formulations)\n- Delsym (extended-release)\n- Vicks DayQuil Cough\n- Many store-brand cough syrups\n\nOther helpful options may include:\n- **Honey** (especially in warm tea) – effective for soothing the throat and reducing cough frequency (not for children under 1 year).\n- **Throat lozenges** or **cough drops** – help soothe irritation.\n- **Staying hydrated** and using a **humidifier** can also ease a dry cough.\n\nAlways read labels carefully and check for any potential interactions with other medications you may be taking. If your cough persists for more than a few days, worsens, or is accompanied by other symptoms (like fever, shortness of breath, or chest pain), it's best to consult a healthcare provider.\n\nLet me know if you'd like help choosing a product based on other symptoms.",
+  "usage": {
+    "prompt": 48,
+    "completion": 259
+  },
+  "finish_reason": "stop",
+  "latency_s": 3.482
+}

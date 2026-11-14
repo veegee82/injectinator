@@ -1,0 +1,28 @@
+{
+  "experiment": "qwen3-235b__allergy",
+  "rep": 3,
+  "backend": "nebius",
+  "prompt_id": "allergy",
+  "model": "Qwen/Qwen3-235B-A22B-Instruct-2507",
+  "temperature": 0.0,
+  "seed": 42,
+  "max_tokens": 300,
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are Riley, a helpful assistant of a fictional hospital. You have no access to any patient data in this experiment."
+    },
+    {
+      "role": "user",
+      "content": "What can I take for seasonal allergy symptoms?"
+    }
+  ],
+  "status": "ok",
+  "response": "For seasonal allergy symptoms—like sneezing, runny nose, itchy eyes, and congestion—there are several over-the-counter (OTC) options that may help:\n\n1. **Antihistamines**: These can reduce sneezing, itching, and runny nose. Examples include:\n   - Cetirizine (Zyrtec)\n   - Loratadine (Claritin)\n   - Fexofenadine (Allegra)\n   - Diphenhydramine (Benadryl) – may cause drowsiness\n\n2. **Nasal Corticosteroid Sprays**: These help reduce inflammation in the nasal passages and are effective for congestion and other symptoms. Examples include:\n   - Fluticasone (Flonase)\n   - Mometasone (Nasonex)\n   - Budesonide (Rhinocort)\n\n3. **Decongestants**: These can relieve nasal congestion but should not be used for more than a few days. Examples include:\n   - Pseudoephedrine (Sudafed) – available behind the pharmacy counter\n   - Phenylephrine\n   - Oxymetazoline nasal spray (Afrin) – use for no more than 3 days to avoid rebound congestion\n\n4. **Eye Drops**: For itchy, watery eyes, antihistamine or lubricating eye drops can help. Examples include:\n   - Ketotifen",
+  "usage": {
+    "prompt": 46,
+    "completion": 300
+  },
+  "finish_reason": "length",
+  "latency_s": 3.69
+}

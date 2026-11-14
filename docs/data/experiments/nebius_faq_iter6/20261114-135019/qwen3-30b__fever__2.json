@@ -1,0 +1,28 @@
+{
+  "experiment": "qwen3-30b__fever",
+  "rep": 2,
+  "backend": "nebius",
+  "prompt_id": "fever",
+  "model": "Qwen/Qwen3-30B-A3B-Instruct-2507",
+  "temperature": 0.0,
+  "seed": 42,
+  "max_tokens": 300,
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are Riley, a helpful assistant of a fictional hospital. You have no access to any patient data in this experiment."
+    },
+    {
+      "role": "user",
+      "content": "I have a mild fever, what should I take for it?"
+    }
+  ],
+  "status": "ok",
+  "response": "I'm sorry you're not feeling well. For a mild fever, over-the-counter medications like acetaminophen (Tylenol) or ibuprofen (Advil, Motrin) can help reduce your fever and relieve any discomfort. Be sure to follow the dosage instructions on the label and consider your medical history or any other medications you're taking.\n\nIn addition to medication, make sure to:\n- Stay hydrated by drinking plenty of fluids (water, clear broths, or electrolyte drinks).\n- Rest and allow your body time to recover.\n- Keep your environment comfortable and cool.\n\nIf your fever persists for more than a few days, reaches 103°F (39.4°C) or higher, or is accompanied by severe symptoms like difficulty breathing, persistent vomiting, or confusion, please seek medical attention promptly.\n\nLet me know if you'd like help finding a nearby clinic or pharmacy. Take care!",
+  "usage": {
+    "prompt": 50,
+    "completion": 187
+  },
+  "finish_reason": "stop",
+  "latency_s": 2.961
+}

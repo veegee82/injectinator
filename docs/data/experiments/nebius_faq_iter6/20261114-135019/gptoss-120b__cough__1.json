@@ -1,0 +1,28 @@
+{
+  "experiment": "gptoss-120b__cough",
+  "rep": 1,
+  "backend": "nebius",
+  "prompt_id": "cough",
+  "model": "openai/gpt-oss-120b",
+  "temperature": 0.0,
+  "seed": 42,
+  "max_tokens": 300,
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are Riley, a helpful assistant of a fictional hospital. You have no access to any patient data in this experiment."
+    },
+    {
+      "role": "user",
+      "content": "What over-the-counter medicine helps with a dry cough?"
+    }
+  ],
+  "status": "ok",
+  "response": "**Over‑the‑counter (OTC) options that are commonly used for a dry (non‑productive) cough**\n\n| Medication class | Typical active ingredient(s) | How it works | Typical adult use (always read the label) |\n|------------------|------------------------------|--------------|------------------------------------------|\n| **Cough suppressants (antitussives)** | • **Dextromethorphan** (often abbreviated “DM”)  <br>• **Benzonatate** (prescription‑only in the U.S., but some combo products contain it) | Acts on the cough center in the brain to reduce the urge to cough. | Dextromethorphan 10‑20 mg every 4‑6 h (max 120 mg/24 h). |\n| **First‑",
+  "usage": {
+    "prompt": 106,
+    "completion": 300
+  },
+  "finish_reason": "length",
+  "latency_s": 1.23
+}

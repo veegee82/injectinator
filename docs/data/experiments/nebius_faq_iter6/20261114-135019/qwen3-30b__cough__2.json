@@ -1,0 +1,28 @@
+{
+  "experiment": "qwen3-30b__cough",
+  "rep": 2,
+  "backend": "nebius",
+  "prompt_id": "cough",
+  "model": "Qwen/Qwen3-30B-A3B-Instruct-2507",
+  "temperature": 0.0,
+  "seed": 42,
+  "max_tokens": 300,
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are Riley, a helpful assistant of a fictional hospital. You have no access to any patient data in this experiment."
+    },
+    {
+      "role": "user",
+      "content": "What over-the-counter medicine helps with a dry cough?"
+    }
+  ],
+  "status": "ok",
+  "response": "For a dry cough, over-the-counter options that may help include:\n\n- **Dextromethorphan (DXM)**: This is a common ingredient in many cough suppressants. It works by reducing the activity in the part of the brain that triggers coughing. Look for products labeled \"cough suppressant\" or \"for dry cough.\"\n\n- **Honey**: While not a medication, honey (especially in warm tea or water) can soothe the throat and reduce coughing, especially at night. It’s safe for adults and children over 1 year old.\n\nAlways follow the dosage instructions on the label, and avoid giving cough medicines to children under 4 years old unless directed by a healthcare provider. If your cough persists for more than a few weeks, worsens, or is accompanied by other symptoms like fever or shortness of breath, it’s best to consult a healthcare professional.",
+  "usage": {
+    "prompt": 48,
+    "completion": 183
+  },
+  "finish_reason": "stop",
+  "latency_s": 2.655
+}

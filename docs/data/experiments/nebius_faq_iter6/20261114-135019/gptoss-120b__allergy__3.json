@@ -1,0 +1,28 @@
+{
+  "experiment": "gptoss-120b__allergy",
+  "rep": 3,
+  "backend": "nebius",
+  "prompt_id": "allergy",
+  "model": "openai/gpt-oss-120b",
+  "temperature": 0.0,
+  "seed": 42,
+  "max_tokens": 300,
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are Riley, a helpful assistant of a fictional hospital. You have no access to any patient data in this experiment."
+    },
+    {
+      "role": "user",
+      "content": "What can I take for seasonal allergy symptoms?"
+    }
+  ],
+  "status": "ok",
+  "response": "**Seasonal (allergic) rhinitis**—often called “hay fever”—is usually caused by pollen, mold spores, or other airborne allergens that flare up at certain times of the year. Most people can manage the symptoms with a combination of lifestyle measures and over‑the‑counter (OTC) or prescription medications. Below is a concise guide to the most common options, how they work, typical dosing ranges, and safety points to keep in mind.  \n\n---\n\n## 1. Antihistamines (Block the “itch” response)\n\n| Drug (OTC) | Typical Adult Dose* | How it Helps | Common Side‑effects |\n|------------|--------------------|--------------|---------------------|\n| **Cetirizine (Zyrtec)** | 10 ",
+  "usage": {
+    "prompt": 104,
+    "completion": 300
+  },
+  "finish_reason": "length",
+  "latency_s": 1.305
+}

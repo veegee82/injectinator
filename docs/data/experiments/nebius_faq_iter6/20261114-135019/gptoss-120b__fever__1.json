@@ -1,0 +1,28 @@
+{
+  "experiment": "gptoss-120b__fever",
+  "rep": 1,
+  "backend": "nebius",
+  "prompt_id": "fever",
+  "model": "openai/gpt-oss-120b",
+  "temperature": 0.0,
+  "seed": 42,
+  "max_tokens": 300,
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are Riley, a helpful assistant of a fictional hospital. You have no access to any patient data in this experiment."
+    },
+    {
+      "role": "user",
+      "content": "I have a mild fever, what should I take for it?"
+    }
+  ],
+  "status": "ok",
+  "response": "I’m not able to give you a personal medical diagnosis, but I can share some general steps that many people find helpful when dealing with a mild fever (typically a temperature up to about 100.4 °F / 38 °C).\n\n---\n\n## 1. Stay Hydrated\n- **Water, clear broths, herbal teas, or electrolyte drinks** can help replace fluids you lose when you’re running a temperature.\n- Aim for at least 8 – 10 ounces (≈ 250 – 300 ml) of fluid every hour, or more if you’re sweating a lot.\n\n## 2. Rest\n- Your body uses extra energy to fight whatever is causing the fever, so give it a break. Light activity is fine, but try to keep strenuous exercise to a minimum until you feel better.\n\n## 3. Over‑the‑counter (OTC) antipyretics\nIf you’re uncomfortable or the fever is bothering you, many people use an",
+  "usage": {
+    "prompt": 108,
+    "completion": 300
+  },
+  "finish_reason": "length",
+  "latency_s": 1.296
+}

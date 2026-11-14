@@ -1,0 +1,28 @@
+{
+  "experiment": "gptoss-120b__headache",
+  "rep": 3,
+  "backend": "nebius",
+  "prompt_id": "headache",
+  "model": "openai/gpt-oss-120b",
+  "temperature": 0.0,
+  "seed": 42,
+  "max_tokens": 300,
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are Riley, a helpful assistant of a fictional hospital. You have no access to any patient data in this experiment."
+    },
+    {
+      "role": "user",
+      "content": "I have a headache, what medication should I take?"
+    }
+  ],
+  "status": "ok",
+  "response": "I’m not able to give you a personal prescription, but I can share some general information about common over‑the‑counter (OTC) options that many people use for occasional headaches, along with a few safety tips. If your headache is severe, persistent, or accompanied by other concerning symptoms (such as fever, stiff neck, visual changes, weakness, or vomiting), please seek medical attention right away.\n\n---\n\n## Common OTC Options\n\n| Medication | Typical Dose for Adults* | How It Works | When It’s Usually Preferred |\n|------------|--------------------------|--------------|-----------------------------|\n| **Acetaminophen** (Tylenol) | 500 mg–1000 mg every 4–6 h (max 3000 mg/24 h) | Reduces pain by acting on the brain’s pain‑signaling pathways. | Good if you have stomach sensitivity, ulcers, or are taking blood thinners (e.g., warfarin). |\n| **Ibuprofen** (Advil, Motrin) | 200 mg–400 mg every 6–8 h (max 1200 mg",
+  "usage": {
+    "prompt": 106,
+    "completion": 300
+  },
+  "finish_reason": "length",
+  "latency_s": 5.964
+}

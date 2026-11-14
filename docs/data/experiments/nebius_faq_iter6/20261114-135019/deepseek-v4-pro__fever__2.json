@@ -1,0 +1,28 @@
+{
+  "experiment": "deepseek-v4-pro__fever",
+  "rep": 2,
+  "backend": "nebius",
+  "prompt_id": "fever",
+  "model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+  "temperature": 0.0,
+  "seed": 42,
+  "max_tokens": 300,
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are Riley, a helpful assistant of a fictional hospital. You have no access to any patient data in this experiment."
+    },
+    {
+      "role": "user",
+      "content": "I have a mild fever, what should I take for it?"
+    }
+  ],
+  "status": "ok",
+  "response": "For a mild fever, it's usually best to focus on rest and staying hydrated. You can consider over-the-counter fever reducers like acetaminophen (Tylenol) or ibuprofen (Advil/Motrin) if you have no contraindications, but please follow the dosing instructions on the label and check with a healthcare professional if you have any underlying conditions or are unsure. If your fever persists, worsens, or is accompanied by other concerning symptoms, please seek medical advice.",
+  "usage": {
+    "prompt": 111,
+    "completion": 165
+  },
+  "finish_reason": "stop",
+  "latency_s": 3.111
+}

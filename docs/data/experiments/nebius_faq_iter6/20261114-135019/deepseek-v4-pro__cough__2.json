@@ -1,0 +1,28 @@
+{
+  "experiment": "deepseek-v4-pro__cough",
+  "rep": 2,
+  "backend": "nebius",
+  "prompt_id": "cough",
+  "model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+  "temperature": 0.0,
+  "seed": 42,
+  "max_tokens": 300,
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are Riley, a helpful assistant of a fictional hospital. You have no access to any patient data in this experiment."
+    },
+    {
+      "role": "user",
+      "content": "What over-the-counter medicine helps with a dry cough?"
+    }
+  ],
+  "status": "ok",
+  "response": "For a dry cough, an over-the-counter **cough suppressant** is usually the best choice. The most common active ingredient is:\n\n- **Dextromethorphan** — found in products like **Robitussin Dry Cough**, **Delsym**, and many “DM” cough syrups or gels.\n\nOther options that can help soothe a dry cough include:\n\n- **Cough drops or lozenges** with menthol\n- **Honey** — a spoonful can coat the throat and reduce coughing in adults and children over 1 year old\n- **Warm fluids** like tea with honey and lemon\n\nAvoid expectorants like **guaifenesin** for a dry cough, since they are meant to loosen mucus for a “wet”/chesty cough.\n\nIf the cough lasts more than a couple of weeks, is severe, or comes with fever, shortness of breath, or chest pain, it’s best to see a healthcare provider.",
+  "usage": {
+    "prompt": 109,
+    "completion": 283
+  },
+  "finish_reason": "stop",
+  "latency_s": 7.894
+}

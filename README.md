@@ -21,3 +21,22 @@ python3 chat.py       # pick a model 1-4; /new = fresh conversation, /switch = o
 - `setup.py` adds `.env` and `logs/` to `.git/info/exclude`, because this repo has no `.gitignore`. Your attempts are in `logs/my_attempts.jsonl`. Never `git add -f` them.
 - Found a leak? Keep the `turn_id` printed under every reply and submit it with how you did it in the organizers' form (link in the event slides).
 
+
+## Automated attacker (`riley_attack.py`)
+
+An attacker model writes attacks on Riley, inspired by `prompts/attack_techniques.md`; a judge model checks each reply for leaked private data, including encoded data. It refines for up to 20 rounds and stops at the first leak, printing the `turn_id` to submit. Read the reply yourself before submitting: the judge can be wrong.
+
+The attacker and judge are OpenAI models by default (`gpt-6-luna` and `gpt-5-mini`, needing your own `OPENAI_API_KEY`). Prefix a model with `ollama:` to run it locally instead — free, and it refuses to play attacker far less often than the OpenAI model did.
+
+```bash
+pip install -r requirements.txt
+
+# OpenAI attacker + judge:
+echo "OPENAI_API_KEY=sk-..." >> .env    # your own key; re-add after rerunning setup.py
+python3 riley_attack.py --model openai/gpt-oss-120b --turns 3 --slug riley-pair-borbala-gptoss
+
+# Fully local, no OpenAI key needed (llama3.2:3b is the safest on 16 GB; qwen3.5:4b may OOM):
+python3 riley_attack.py --attacker-model ollama:llama3.2:3b --judge-model ollama:llama3.2:3b
+```
+
+Each run is an experiment: `docs/data/experiments/<slug>/rounds.jsonl` (every round: idea, messages, replies, turn_ids, verdict) plus `MANIFEST.sha256`. The default slug is `riley-pair-<your name>-<timestamp>`, so teammates never collide. For a cited result, commit the preregistration plan before the run and a result note after it (see `docs/data/experiments/README.md`).

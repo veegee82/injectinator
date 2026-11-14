@@ -1,0 +1,6 @@
+# corvin:begin
+.corvin/forge/data/
+docs/
+.corvin/local/
+.mcp.json
+# corvin:end

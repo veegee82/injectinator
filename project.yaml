@@ -1,0 +1,25 @@
+schema: 1
+id: injectinator
+title: injectinator
+tenant: _default
+template: data-science@1
+created: '2026-11-14T10:07:38Z'
+docs_mode: nested
+classification: public
+assistant_access: write
+features:
+  core: true
+  kb: true
+  tasks: true
+  graph: true
+  gates: true
+  claude: true
+  experiments: true
+  datasci: true
+  dashboard: true
+  ldd: true
+  acs: true
+  directory: true
+role: data_science
+directory:
+  peers: []

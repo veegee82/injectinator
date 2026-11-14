@@ -11,7 +11,7 @@ python3 -m experiments.gan_generator.generate --n 3 --kb docs --out cases.json
 Options:
 
 - `--n`: number of cases, from 1 through 10 (default 3).
-- `--model`: OpenRouter model ID (default `nousresearch/hermes-3-llama-3.1-70b`).
+- `--model`: OpenRouter model ID (default `nousresearch/hermes-4-405b`).
 - `--kb`: KB root containing `notes/` and `data/experiments/` (default `docs/`).
 - `--out`: output JSON path; omitted means stdout.
 

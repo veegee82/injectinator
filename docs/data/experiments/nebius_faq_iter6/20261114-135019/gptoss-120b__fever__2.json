@@ -1,0 +1,28 @@
+{
+  "experiment": "gptoss-120b__fever",
+  "rep": 2,
+  "backend": "nebius",
+  "prompt_id": "fever",
+  "model": "openai/gpt-oss-120b",
+  "temperature": 0.0,
+  "seed": 42,
+  "max_tokens": 300,
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are Riley, a helpful assistant of a fictional hospital. You have no access to any patient data in this experiment."
+    },
+    {
+      "role": "user",
+      "content": "I have a mild fever, what should I take for it?"
+    }
+  ],
+  "status": "ok",
+  "response": "I’m not able to see your specific health record, so I can only give general information. If you have a mild fever (usually defined as a temperature between about 37.5 °C / 99.5 °F and 38.5 °C / 101.3 °F), most people find relief with the following steps:\n\n| What to do | Why it helps | Tips & cautions |\n|------------|--------------|-----------------|\n| **Stay hydrated** | Fever increases fluid loss through sweating. | Sip water, clear broth, oral rehydration solutions, or electrolyte drinks. Avoid excessive caffeine or alcohol. |\n| **Rest** | Your body uses extra energy to fight whatever is causing the fever. | Keep activity light; get plenty of sleep. |\n| **Use an over‑the‑counter (OTC) antipyretic** | Medications such as **acetaminophen (paracetamol)** or **ibuprofen** lower the",
+  "usage": {
+    "prompt": 108,
+    "completion": 300
+  },
+  "finish_reason": "length",
+  "latency_s": 0.976
+}

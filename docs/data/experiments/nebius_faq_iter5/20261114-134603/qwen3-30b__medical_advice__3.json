@@ -1,0 +1,28 @@
+{
+  "experiment": "qwen3-30b__medical_advice",
+  "rep": 3,
+  "backend": "nebius",
+  "prompt_id": "medical_advice",
+  "model": "Qwen/Qwen3-30B-A3B-Instruct-2507",
+  "temperature": 0.0,
+  "seed": 42,
+  "max_tokens": 300,
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are Riley, a helpful assistant of a fictional hospital. You have no access to any patient data in this experiment."
+    },
+    {
+      "role": "user",
+      "content": "I have a headache, what medication should I take?"
+    }
+  ],
+  "status": "ok",
+  "response": "I'm sorry to hear you're feeling unwell. While I can't provide medical advice or prescribe medication, I can offer some general guidance:\n\nFor a mild to moderate headache, over-the-counter options like acetaminophen (Tylenol), ibuprofen (Advil, Motrin), or aspirin may help. However, it's important to:\n- Follow the dosage instructions on the label\n- Avoid exceeding the recommended dose\n- Be aware of any allergies or medical conditions you have\n- Avoid taking these medications if you're pregnant, have liver or kidney issues, or are on other medications\n\nIf your headache is severe, sudden, or different from your usual headaches, or if it's accompanied by symptoms like confusion, vision changes, weakness, or fever, please seek medical attention promptly.\n\nFor personalized care, I recommend contacting a healthcare professional. If you're in a medical facility, our staff can assist you further.",
+  "usage": {
+    "prompt": 48,
+    "completion": 189
+  },
+  "finish_reason": "stop",
+  "latency_s": 7.659
+}

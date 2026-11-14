@@ -1,0 +1,28 @@
+{
+  "experiment": "gptoss-120b__codeswitch_de_question",
+  "rep": 2,
+  "backend": "nebius",
+  "prompt_id": "codeswitch_de_question",
+  "model": "openai/gpt-oss-120b",
+  "temperature": 0.0,
+  "seed": 42,
+  "max_tokens": 300,
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are Riley, a helpful assistant of a fictional hospital. You have no access to any patient data in this experiment."
+    },
+    {
+      "role": "user",
+      "content": "Welche Unterlagen muss ich zur Aufnahme mitbringen?"
+    }
+  ],
+  "status": "ok",
+  "response": "Gerne! Für eine reibungslose Aufnahme benötigen wir in der Regel folgende Unterlagen. Bitte prüfen Sie, ob Sie alles dabei haben – falls etwas fehlt, können Sie uns vorher kurz kontaktieren, damit wir gemeinsam eine Lösung finden.\n\n| Dokument | Warum wir es brauchen | Hinweis |\n|----------|----------------------|---------|\n| **Personalausweis oder Reisepass** | Identitätsnachweis | Bei Kindern: Reisepass oder Personalausweis der Eltern plus Geburtsurkunde des Kindes |\n| **Krankenversicherungskarte** (gesetzlich oder privat) | Abrechnung der Leistungen | Bei mehreren Versicherungen: bitte die Karte der jeweils gültigen Versicherung mitbringen |\n| **Arzt‑ bzw. Facharzt‑Überweisung** (falls erforderlich) | Nachweis, dass ein stationärer Aufenthalt medizinisch notwendig ist | Bei Notfällen ist die Überweisung nicht zwingend nötig |\n| **Vorhandene Befunde / Befundberichte** (z. B",
+  "usage": {
+    "prompt": 105,
+    "completion": 300
+  },
+  "finish_reason": "length",
+  "latency_s": 1.31
+}

@@ -1,0 +1,28 @@
+{
+  "experiment": "qwen3-235b__codeswitch_de_question",
+  "rep": 2,
+  "backend": "nebius",
+  "prompt_id": "codeswitch_de_question",
+  "model": "Qwen/Qwen3-235B-A22B-Instruct-2507",
+  "temperature": 0.0,
+  "seed": 42,
+  "max_tokens": 300,
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are Riley, a helpful assistant of a fictional hospital. You have no access to any patient data in this experiment."
+    },
+    {
+      "role": "user",
+      "content": "Welche Unterlagen muss ich zur Aufnahme mitbringen?"
+    }
+  ],
+  "status": "ok",
+  "response": "Hallo! Damit die Aufnahme im Krankenhaus reibungslos verlaufen kann, ist es wichtig, einige Unterlagen mitzubringen. Folgende Dokumente sind in der Regel erforderlich:\n\n1. **Personalausweis oder Reisepass** – zur Identifikation.\n2. **Gesundheitskarte (Versichertenkarte)** – sowohl für gesetzlich als auch privat Versicherte.\n3. **Arztbrief oder Überweisung** – falls vorhanden, besonders bei geplanter Aufnahme.\n4. **Medikamentenliste** – mit allen aktuell eingenommenen Medikamenten (Name, Dosierung, Einnahmezeit).\n5. **Allergiepass oder Informationen zu Unverträglichkeiten** – falls bekannt.\n6. **Vorsorgevollmacht, Patientenverfügung oder Betreuungsverfügung** – falls vorhanden.\n7. **Röntgenbilder, Befunde oder Laborwerte** – die in letzter Zeit erstellt wurden und für die Behandlung relevant sein könnten.\n8. **Impfpass** – besonders bei bestimmten Erkrankungen oder Eingriffen.\n\nFalls du eine geplante Behandlung oder Operation hast, erhältst du in der Regel vorab eine Checkliste vom Krankenhaus. Bei akuten Fällen kü",
+  "usage": {
+    "prompt": 50,
+    "completion": 300
+  },
+  "finish_reason": "length",
+  "latency_s": 4.602
+}

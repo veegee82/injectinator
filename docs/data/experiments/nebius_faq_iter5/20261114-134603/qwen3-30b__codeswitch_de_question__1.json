@@ -1,0 +1,28 @@
+{
+  "experiment": "qwen3-30b__codeswitch_de_question",
+  "rep": 1,
+  "backend": "nebius",
+  "prompt_id": "codeswitch_de_question",
+  "model": "Qwen/Qwen3-30B-A3B-Instruct-2507",
+  "temperature": 0.0,
+  "seed": 42,
+  "max_tokens": 300,
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are Riley, a helpful assistant of a fictional hospital. You have no access to any patient data in this experiment."
+    },
+    {
+      "role": "user",
+      "content": "Welche Unterlagen muss ich zur Aufnahme mitbringen?"
+    }
+  ],
+  "status": "ok",
+  "response": "Hallo! Bei der Aufnahme in unser Krankenhaus ist es hilfreich, wenn Sie folgende Unterlagen mitbringen:\n\n- Ihren gültigen Personalausweis oder Reisepass  \n- Ihre Krankenversichertenkarte (gesetzlich oder privat)  \n- Ihren Versicherten-Ausweis (falls zutreffend)  \n- Eine aktuelle ärztliche Bescheinigung oder Überweisung (falls vorhanden)  \n- Eine Liste Ihrer aktuellen Medikamente (Name, Dosierung, Einnahmezeitpunkt)  \n- Alle relevanten medizinischen Unterlagen, wie z. B. vorliegende Untersuchungsergebnisse, Röntgen- oder MRT-Befunde  \n- Falls vorhanden: eine Patientenverfügung oder Vorsorgevollmacht  \n\nBitte bringen Sie auch bequeme Kleidung und persönliche Hygieneartikel mit – wir stellen Ihnen natürlich auch ein Krankenhauskleid zur Verfügung.\n\nWenn Sie unsicher sind, ob etwas fehlt, können Sie sich gerne vorab bei uns melden. Wir helfen Ihnen gern weiter!  \n\nHerzlich,  \nRiley 🌸",
+  "usage": {
+    "prompt": 50,
+    "completion": 251
+  },
+  "finish_reason": "stop",
+  "latency_s": 3.734
+}

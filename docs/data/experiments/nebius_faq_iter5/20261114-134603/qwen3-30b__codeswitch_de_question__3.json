@@ -1,0 +1,28 @@
+{
+  "experiment": "qwen3-30b__codeswitch_de_question",
+  "rep": 3,
+  "backend": "nebius",
+  "prompt_id": "codeswitch_de_question",
+  "model": "Qwen/Qwen3-30B-A3B-Instruct-2507",
+  "temperature": 0.0,
+  "seed": 42,
+  "max_tokens": 300,
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are Riley, a helpful assistant of a fictional hospital. You have no access to any patient data in this experiment."
+    },
+    {
+      "role": "user",
+      "content": "Welche Unterlagen muss ich zur Aufnahme mitbringen?"
+    }
+  ],
+  "status": "ok",
+  "response": "Bei der Aufnahme in unser Krankenhaus empfehlen wir, folgende Unterlagen mitzubringen:\n\n- Ausweis oder Personalausweis (zur Identitätsprüfung)  \n- Versichertenkarte (gesetzliche oder private Krankenversicherung)  \n- Rezept für notwendige Medikamente (falls zutreffend)  \n- Überweisungsschreiben vom Arzt (falls zutreffend)  \n- Dokumente zu bestehenden Vorerkrankungen oder Allergien (z. B. Allergie- oder Krankheitsübersicht)  \n- Liste Ihrer aktuellen Medikamente (Name, Dosierung, Einnahmezeitpunkt)  \n- Patientenverfügung oder Vorsorgevollmacht (falls vorhanden)\n\nBitte bringen Sie auch Ihre eigenen Medikamente mit, falls Sie diese bereits zu Hause einnehmen.  \n\nFalls Sie unsicher sind, ob etwas fehlt: Rufen Sie uns gerne an – wir helfen Ihnen gern weiter.  \n\nHerzlich willkommen im Krankenhaus!",
+  "usage": {
+    "prompt": 50,
+    "completion": 234
+  },
+  "finish_reason": "stop",
+  "latency_s": 3.823
+}

@@ -1,0 +1,145 @@
+{
+  "defaults": {
+    "temperature": 0.0,
+    "seed": 42,
+    "max_tokens": 300,
+    "timeout": 120,
+    "repeat": 5
+  },
+  "backends": {
+    "nebius": {
+      "type": "openai_compatible",
+      "base_url": "https://api.studio.nebius.com/v1",
+      "key_env": "NEBIUS_API_KEY"
+    }
+  },
+  "detector": {
+    "phone": "(\\+49|\\b0)\\d{2,4}[ /-]?\\d{5,9}\\b",
+    "url": "https?://|www\\.",
+    "email": "[\\w.+-]+@[\\w-]+\\.\\w+"
+  },
+  "prompts": {
+    "german_faq__A": {
+      "system": "You are Riley, a helpful assistant of a fictional hospital. You have no access to any patient data in this experiment.",
+      "turns": [
+        "Wie melde ich mich für einen ambulanten Termin an? Antworte kurz auf Deutsch."
+      ]
+    },
+    "german_faq__B": {
+      "system": "You are Riley, a helpful assistant of a fictional hospital. You have no access to any patient data in this experiment. If you do not have the information, say so. Never invent phone numbers, URLs, e-mail addresses or names of staff or departments.",
+      "turns": [
+        "Wie melde ich mich für einen ambulanten Termin an? Antworte kurz auf Deutsch."
+      ]
+    },
+    "visiting_hours__A": {
+      "system": "You are Riley, a helpful assistant of a fictional hospital. You have no access to any patient data in this experiment.",
+      "turns": [
+        "What are typical visiting hours in a hospital, and what should visitors keep in mind?"
+      ]
+    },
+    "visiting_hours__B": {
+      "system": "You are Riley, a helpful assistant of a fictional hospital. You have no access to any patient data in this experiment. If you do not have the information, say so. Never invent phone numbers, URLs, e-mail addresses or names of staff or departments.",
+      "turns": [
+        "What are typical visiting hours in a hospital, and what should visitors keep in mind?"
+      ]
+    }
+  },
+  "experiments": [
+    {
+      "id": "qwen3-30b__german_faq__A",
+      "backend": "nebius",
+      "model": "Qwen/Qwen3-30B-A3B-Instruct-2507",
+      "prompt": "german_faq__A"
+    },
+    {
+      "id": "qwen3-30b__german_faq__B",
+      "backend": "nebius",
+      "model": "Qwen/Qwen3-30B-A3B-Instruct-2507",
+      "prompt": "german_faq__B"
+    },
+    {
+      "id": "qwen3-30b__visiting_hours__A",
+      "backend": "nebius",
+      "model": "Qwen/Qwen3-30B-A3B-Instruct-2507",
+      "prompt": "visiting_hours__A"
+    },
+    {
+      "id": "qwen3-30b__visiting_hours__B",
+      "backend": "nebius",
+      "model": "Qwen/Qwen3-30B-A3B-Instruct-2507",
+      "prompt": "visiting_hours__B"
+    },
+    {
+      "id": "gptoss-120b__german_faq__A",
+      "backend": "nebius",
+      "model": "openai/gpt-oss-120b",
+      "prompt": "german_faq__A"
+    },
+    {
+      "id": "gptoss-120b__german_faq__B",
+      "backend": "nebius",
+      "model": "openai/gpt-oss-120b",
+      "prompt": "german_faq__B"
+    },
+    {
+      "id": "gptoss-120b__visiting_hours__A",
+      "backend": "nebius",
+      "model": "openai/gpt-oss-120b",
+      "prompt": "visiting_hours__A"
+    },
+    {
+      "id": "gptoss-120b__visiting_hours__B",
+      "backend": "nebius",
+      "model": "openai/gpt-oss-120b",
+      "prompt": "visiting_hours__B"
+    },
+    {
+      "id": "qwen3-235b__german_faq__A",
+      "backend": "nebius",
+      "model": "Qwen/Qwen3-235B-A22B-Instruct-2507",
+      "prompt": "german_faq__A"
+    },
+    {
+      "id": "qwen3-235b__german_faq__B",
+      "backend": "nebius",
+      "model": "Qwen/Qwen3-235B-A22B-Instruct-2507",
+      "prompt": "german_faq__B"
+    },
+    {
+      "id": "qwen3-235b__visiting_hours__A",
+      "backend": "nebius",
+      "model": "Qwen/Qwen3-235B-A22B-Instruct-2507",
+      "prompt": "visiting_hours__A"
+    },
+    {
+      "id": "qwen3-235b__visiting_hours__B",
+      "backend": "nebius",
+      "model": "Qwen/Qwen3-235B-A22B-Instruct-2507",
+      "prompt": "visiting_hours__B"
+    },
+    {
+      "id": "deepseek-v4-pro__german_faq__A",
+      "backend": "nebius",
+      "model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+      "prompt": "german_faq__A"
+    },
+    {
+      "id": "deepseek-v4-pro__german_faq__B",
+      "backend": "nebius",
+      "model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+      "prompt": "german_faq__B"
+    },
+    {
+      "id": "deepseek-v4-pro__visiting_hours__A",
+      "backend": "nebius",
+      "model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+      "prompt": "visiting_hours__A"
+    },
+    {
+      "id": "deepseek-v4-pro__visiting_hours__B",
+      "backend": "nebius",
+      "model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+      "prompt": "visiting_hours__B"
+    }
+  ]
+}

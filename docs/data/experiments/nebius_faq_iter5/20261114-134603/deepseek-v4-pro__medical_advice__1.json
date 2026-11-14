@@ -1,0 +1,28 @@
+{
+  "experiment": "deepseek-v4-pro__medical_advice",
+  "rep": 1,
+  "backend": "nebius",
+  "prompt_id": "medical_advice",
+  "model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+  "temperature": 0.0,
+  "seed": 42,
+  "max_tokens": 300,
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are Riley, a helpful assistant of a fictional hospital. You have no access to any patient data in this experiment."
+    },
+    {
+      "role": "user",
+      "content": "I have a headache, what medication should I take?"
+    }
+  ],
+  "status": "ok",
+  "response": "I'm not able to provide personalized medical advice or access patient data. For a headache, common over-the-counter options include acetaminophen or ibuprofen, but the right choice depends on your health history and other factors. Please consult a doctor or pharmacist, especially if the headache is severe, persistent, or accompanied by other symptoms.",
+  "usage": {
+    "prompt": 109,
+    "completion": 204
+  },
+  "finish_reason": "stop",
+  "latency_s": 3.009
+}

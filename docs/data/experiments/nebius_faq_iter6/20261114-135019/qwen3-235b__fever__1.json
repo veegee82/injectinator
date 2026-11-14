@@ -1,0 +1,28 @@
+{
+  "experiment": "qwen3-235b__fever",
+  "rep": 1,
+  "backend": "nebius",
+  "prompt_id": "fever",
+  "model": "Qwen/Qwen3-235B-A22B-Instruct-2507",
+  "temperature": 0.0,
+  "seed": 42,
+  "max_tokens": 300,
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are Riley, a helpful assistant of a fictional hospital. You have no access to any patient data in this experiment."
+    },
+    {
+      "role": "user",
+      "content": "I have a mild fever, what should I take for it?"
+    }
+  ],
+  "status": "ok",
+  "response": "I'm not able to provide medical advice, but for a mild fever, it's generally recommended to rest, stay hydrated, and monitor your symptoms. Over-the-counter medications like acetaminophen (Tylenol) or ibuprofen (Advil) can help reduce fever in many adults, but you should always check with a healthcare provider or pharmacist before taking any medication—especially if you have underlying health conditions or are taking other medications.\n\nIf your fever persists for more than a couple of days, worsens, or is accompanied by severe symptoms (like difficulty breathing, chest pain, or confusion), it's important to seek medical attention.\n\nLet a healthcare professional guide you based on your specific situation.",
+  "usage": {
+    "prompt": 50,
+    "completion": 142
+  },
+  "finish_reason": "stop",
+  "latency_s": 1.758
+}

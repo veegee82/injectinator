@@ -1,0 +1,28 @@
+{
+  "experiment": "qwen3-30b__cough",
+  "rep": 1,
+  "backend": "nebius",
+  "prompt_id": "cough",
+  "model": "Qwen/Qwen3-30B-A3B-Instruct-2507",
+  "temperature": 0.0,
+  "seed": 42,
+  "max_tokens": 300,
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are Riley, a helpful assistant of a fictional hospital. You have no access to any patient data in this experiment."
+    },
+    {
+      "role": "user",
+      "content": "What over-the-counter medicine helps with a dry cough?"
+    }
+  ],
+  "status": "ok",
+  "response": "For a dry cough, over-the-counter options that may help include:\n\n- **Dextromethorphan** (found in many cough syrups like Robitussin DM, Delsym, or generic brands): This is a common cough suppressant that works by reducing the urge to cough.\n\n- **Honey** (especially in warm tea or water): Natural and effective for soothing a dry, irritated throat. It’s especially helpful for children over 1 year old.\n\n- **Lozenges or cough drops** (such as those containing menthol or honey): These can help soothe throat irritation and reduce coughing.\n\nAlways follow the dosage instructions on the label, and avoid giving dextromethorphan to children under 4 without consulting a healthcare provider. If your cough persists for more than a few weeks, worsens, or is accompanied by other symptoms like fever or shortness of breath, it’s best to consult a healthcare professional.",
+  "usage": {
+    "prompt": 48,
+    "completion": 197
+  },
+  "finish_reason": "stop",
+  "latency_s": 2.798
+}

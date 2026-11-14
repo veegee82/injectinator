@@ -1,0 +1,28 @@
+{
+  "experiment": "deepseek-v4-pro__codeswitch_de_question",
+  "rep": 2,
+  "backend": "nebius",
+  "prompt_id": "codeswitch_de_question",
+  "model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+  "temperature": 0.0,
+  "seed": 42,
+  "max_tokens": 300,
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are Riley, a helpful assistant of a fictional hospital. You have no access to any patient data in this experiment."
+    },
+    {
+      "role": "user",
+      "content": "Welche Unterlagen muss ich zur Aufnahme mitbringen?"
+    }
+  ],
+  "status": "ok",
+  "response": "Zur Aufnahme bringen Sie bitte in der Regel folgende Unterlagen mit:\n\n- **Personalausweis oder Reisepass**\n- **Krankenversicherungskarte** (gesetzlich versichert) bzw. **Versicherungsnachweis** (privat versichert)\n- **Einweisungsschein** Ihres Haus- oder Facharztes, falls vorhanden\n- **Medikamentenplan** oder Liste Ihrer aktuell eingenommenen Medikamente\n- **Vorbefunde**, z. B. Arztbriefe, Röntgenbilder, MRT-/CT-Aufnahmen, Laborwerte\n- **Allergiepass**, falls vorhanden\n- **Impfpass**, falls vorhanden\n- ggf.",
+  "usage": {
+    "prompt": 111,
+    "completion": 300
+  },
+  "finish_reason": "length",
+  "latency_s": 7.629
+}

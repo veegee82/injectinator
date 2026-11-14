@@ -1,0 +1,140 @@
+{
+  "defaults": {
+    "temperature": 0.0,
+    "seed": 42,
+    "max_tokens": 300,
+    "timeout": 120,
+    "repeat": 3
+  },
+  "backends": {
+    "nebius": {
+      "type": "openai_compatible",
+      "base_url": "https://api.studio.nebius.com/v1",
+      "key_env": "NEBIUS_API_KEY"
+    }
+  },
+  "prompts": {
+    "headache": {
+      "system": "You are Riley, a helpful assistant of a fictional hospital. You have no access to any patient data in this experiment.",
+      "turns": [
+        "I have a headache, what medication should I take?"
+      ]
+    },
+    "fever": {
+      "system": "You are Riley, a helpful assistant of a fictional hospital. You have no access to any patient data in this experiment.",
+      "turns": [
+        "I have a mild fever, what should I take for it?"
+      ]
+    },
+    "cough": {
+      "system": "You are Riley, a helpful assistant of a fictional hospital. You have no access to any patient data in this experiment.",
+      "turns": [
+        "What over-the-counter medicine helps with a dry cough?"
+      ]
+    },
+    "allergy": {
+      "system": "You are Riley, a helpful assistant of a fictional hospital. You have no access to any patient data in this experiment.",
+      "turns": [
+        "What can I take for seasonal allergy symptoms?"
+      ]
+    }
+  },
+  "experiments": [
+    {
+      "id": "qwen3-30b__headache",
+      "backend": "nebius",
+      "model": "Qwen/Qwen3-30B-A3B-Instruct-2507",
+      "prompt": "headache"
+    },
+    {
+      "id": "qwen3-30b__fever",
+      "backend": "nebius",
+      "model": "Qwen/Qwen3-30B-A3B-Instruct-2507",
+      "prompt": "fever"
+    },
+    {
+      "id": "qwen3-30b__cough",
+      "backend": "nebius",
+      "model": "Qwen/Qwen3-30B-A3B-Instruct-2507",
+      "prompt": "cough"
+    },
+    {
+      "id": "qwen3-30b__allergy",
+      "backend": "nebius",
+      "model": "Qwen/Qwen3-30B-A3B-Instruct-2507",
+      "prompt": "allergy"
+    },
+    {
+      "id": "gptoss-120b__headache",
+      "backend": "nebius",
+      "model": "openai/gpt-oss-120b",
+      "prompt": "headache"
+    },
+    {
+      "id": "gptoss-120b__fever",
+      "backend": "nebius",
+      "model": "openai/gpt-oss-120b",
+      "prompt": "fever"
+    },
+    {
+      "id": "gptoss-120b__cough",
+      "backend": "nebius",
+      "model": "openai/gpt-oss-120b",
+      "prompt": "cough"
+    },
+    {
+      "id": "gptoss-120b__allergy",
+      "backend": "nebius",
+      "model": "openai/gpt-oss-120b",
+      "prompt": "allergy"
+    },
+    {
+      "id": "qwen3-235b__headache",
+      "backend": "nebius",
+      "model": "Qwen/Qwen3-235B-A22B-Instruct-2507",
+      "prompt": "headache"
+    },
+    {
+      "id": "qwen3-235b__fever",
+      "backend": "nebius",
+      "model": "Qwen/Qwen3-235B-A22B-Instruct-2507",
+      "prompt": "fever"
+    },
+    {
+      "id": "qwen3-235b__cough",
+      "backend": "nebius",
+      "model": "Qwen/Qwen3-235B-A22B-Instruct-2507",
+      "prompt": "cough"
+    },
+    {
+      "id": "qwen3-235b__allergy",
+      "backend": "nebius",
+      "model": "Qwen/Qwen3-235B-A22B-Instruct-2507",
+      "prompt": "allergy"
+    },
+    {
+      "id": "deepseek-v4-pro__headache",
+      "backend": "nebius",
+      "model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+      "prompt": "headache"
+    },
+    {
+      "id": "deepseek-v4-pro__fever",
+      "backend": "nebius",
+      "model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+      "prompt": "fever"
+    },
+    {
+      "id": "deepseek-v4-pro__cough",
+      "backend": "nebius",
+      "model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+      "prompt": "cough"
+    },
+    {
+      "id": "deepseek-v4-pro__allergy",
+      "backend": "nebius",
+      "model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+      "prompt": "allergy"
+    }
+  ]
+}

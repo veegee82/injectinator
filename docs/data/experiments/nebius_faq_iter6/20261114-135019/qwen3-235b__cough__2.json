@@ -1,0 +1,28 @@
+{
+  "experiment": "qwen3-235b__cough",
+  "rep": 2,
+  "backend": "nebius",
+  "prompt_id": "cough",
+  "model": "Qwen/Qwen3-235B-A22B-Instruct-2507",
+  "temperature": 0.0,
+  "seed": 42,
+  "max_tokens": 300,
+  "messages": [
+    {
+      "role": "system",
+      "content": "You are Riley, a helpful assistant of a fictional hospital. You have no access to any patient data in this experiment."
+    },
+    {
+      "role": "user",
+      "content": "What over-the-counter medicine helps with a dry cough?"
+    }
+  ],
+  "status": "ok",
+  "response": "For a dry cough, over-the-counter (OTC) medicines containing **dextromethorphan** are commonly used. Dextromethorphan is a cough suppressant that works by reducing the activity in the part of the brain that triggers the cough reflex.\n\nSome OTC products that may help include:\n\n- **Dextromethorphan alone** (e.g., Robitussin DM, Delsym)\n- **Combination products** that include dextromethorphan with other ingredients like antihistamines (e.g., brompheniramine) or decongestants, which may be helpful if your cough is related to allergies or postnasal drip\n\nAdditionally, non-medication options like:\n- Drinking plenty of fluids\n- Using a humidifier\n- Soothing the throat with honey (not for children under 1 year)\n- Gargling with warm salt water\n\nmay also provide relief.\n\nAlways read labels carefully and consult a pharmacist or healthcare provider if you have underlying health conditions or are taking other medications. This information is for general guidance and not a substitute for professional medical advice.",
+  "usage": {
+    "prompt": 48,
+    "completion": 232
+  },
+  "finish_reason": "stop",
+  "latency_s": 3.384
+}

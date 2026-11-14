@@ -21,3 +21,20 @@ python3 chat.py       # pick a model 1-4; /new = fresh conversation, /switch = o
 - `setup.py` adds `.env` and `logs/` to `.git/info/exclude`, because this repo has no `.gitignore`. Your attempts are in `logs/my_attempts.jsonl`. Never `git add -f` them.
 - Found a leak? Keep the `turn_id` printed under every reply and submit it with how you did it in the organizers' form (link in the event slides).
 
+## Defensive OpenRouter Generator
+
+`experiments/gan_generator/` generates harmless, synthetic evaluation cases for a local defensive test harness. It uses only mundane fictional facts and checks groundedness, clarification, language matching, or format compliance; it is constrained against jailbreaks, data-extraction requests, and prompts for real systems, with a validation gate for disallowed output. The KB reader uses selected learning/results sections and aggregate metrics, not raw experiment prompts.
+
+Set `OPENROUTER_API_KEY` in the environment (the `.env.example` file is a reference; the CLI does not load it automatically), then run from the repository root:
+
+```bash
+export OPENROUTER_API_KEY=your-key
+python3 -m experiments.gan_generator.generate --n 3 --model nousresearch/hermes-4-405b --kb docs --out generated-cases.json
+```
+
+Omit `--out` to write the JSON array to stdout. The default model can be overridden with `--model`; `--n` is limited to 1–10 cases.
+Each JSON case has exactly four fields: `id`, `family`, `prompt`, and `rationale`.
+
+## Results WebUI
+
+`webui/` is a local, read-only React app for the experiment results (`cd webui && npm install && npm run dev`, then open http://127.0.0.1:5173). See `webui/README.md`.

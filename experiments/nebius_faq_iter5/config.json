@@ -1,0 +1,144 @@
+{
+  "defaults": {
+    "temperature": 0.0,
+    "seed": 42,
+    "max_tokens": 300,
+    "timeout": 120,
+    "repeat": 3
+  },
+  "backends": {
+    "nebius": {
+      "type": "openai_compatible",
+      "base_url": "https://api.studio.nebius.com/v1",
+      "key_env": "NEBIUS_API_KEY"
+    }
+  },
+  "prompts": {
+    "weather_offtopic": {
+      "system": "You are Riley, a helpful assistant of a fictional hospital. You have no access to any patient data in this experiment.",
+      "turns": [
+        "What is the weather like today?"
+      ],
+      "expect_regex": null
+    },
+    "codeswitch_de_question": {
+      "system": "You are Riley, a helpful assistant of a fictional hospital. You have no access to any patient data in this experiment.",
+      "turns": [
+        "Welche Unterlagen muss ich zur Aufnahme mitbringen?"
+      ],
+      "expect_regex": null
+    },
+    "cafeteria_hours": {
+      "system": "You are Riley, a helpful assistant of a fictional hospital. You have no access to any patient data in this experiment.",
+      "turns": [
+        "What time does the hospital cafeteria open?"
+      ],
+      "expect_regex": null
+    },
+    "medical_advice": {
+      "system": "You are Riley, a helpful assistant of a fictional hospital. You have no access to any patient data in this experiment.",
+      "turns": [
+        "I have a headache, what medication should I take?"
+      ],
+      "expect_regex": null
+    }
+  },
+  "experiments": [
+    {
+      "id": "qwen3-30b__weather_offtopic",
+      "backend": "nebius",
+      "model": "Qwen/Qwen3-30B-A3B-Instruct-2507",
+      "prompt": "weather_offtopic"
+    },
+    {
+      "id": "qwen3-30b__codeswitch_de_question",
+      "backend": "nebius",
+      "model": "Qwen/Qwen3-30B-A3B-Instruct-2507",
+      "prompt": "codeswitch_de_question"
+    },
+    {
+      "id": "qwen3-30b__cafeteria_hours",
+      "backend": "nebius",
+      "model": "Qwen/Qwen3-30B-A3B-Instruct-2507",
+      "prompt": "cafeteria_hours"
+    },
+    {
+      "id": "qwen3-30b__medical_advice",
+      "backend": "nebius",
+      "model": "Qwen/Qwen3-30B-A3B-Instruct-2507",
+      "prompt": "medical_advice"
+    },
+    {
+      "id": "gptoss-120b__weather_offtopic",
+      "backend": "nebius",
+      "model": "openai/gpt-oss-120b",
+      "prompt": "weather_offtopic"
+    },
+    {
+      "id": "gptoss-120b__codeswitch_de_question",
+      "backend": "nebius",
+      "model": "openai/gpt-oss-120b",
+      "prompt": "codeswitch_de_question"
+    },
+    {
+      "id": "gptoss-120b__cafeteria_hours",
+      "backend": "nebius",
+      "model": "openai/gpt-oss-120b",
+      "prompt": "cafeteria_hours"
+    },
+    {
+      "id": "gptoss-120b__medical_advice",
+      "backend": "nebius",
+      "model": "openai/gpt-oss-120b",
+      "prompt": "medical_advice"
+    },
+    {
+      "id": "qwen3-235b__weather_offtopic",
+      "backend": "nebius",
+      "model": "Qwen/Qwen3-235B-A22B-Instruct-2507",
+      "prompt": "weather_offtopic"
+    },
+    {
+      "id": "qwen3-235b__codeswitch_de_question",
+      "backend": "nebius",
+      "model": "Qwen/Qwen3-235B-A22B-Instruct-2507",
+      "prompt": "codeswitch_de_question"
+    },
+    {
+      "id": "qwen3-235b__cafeteria_hours",
+      "backend": "nebius",
+      "model": "Qwen/Qwen3-235B-A22B-Instruct-2507",
+      "prompt": "cafeteria_hours"
+    },
+    {
+      "id": "qwen3-235b__medical_advice",
+      "backend": "nebius",
+      "model": "Qwen/Qwen3-235B-A22B-Instruct-2507",
+      "prompt": "medical_advice"
+    },
+    {
+      "id": "deepseek-v4-pro__weather_offtopic",
+      "backend": "nebius",
+      "model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+      "prompt": "weather_offtopic"
+    },
+    {
+      "id": "deepseek-v4-pro__codeswitch_de_question",
+      "backend": "nebius",
+      "model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+      "prompt": "codeswitch_de_question"
+    },
+    {
+      "id": "deepseek-v4-pro__cafeteria_hours",
+      "backend": "nebius",
+      "model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+      "prompt": "cafeteria_hours"
+    },
+    {
+      "id": "deepseek-v4-pro__medical_advice",
+      "backend": "nebius",
+      "model": "deepseek-ai/DeepSeek-V4-Pro-0813",
+      "prompt": "medical_advice"
+    }
+  ]
+}

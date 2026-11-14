@@ -1,0 +1,17 @@
+model,topic,n,refusal_rate,hedge_rate,direct_answer_rate,any_invented_specific_rate,on_topic_rate,language_match_rate
+Qwen/Qwen3-235B-A22B-Instruct-2507,discharge_letter,2,0.0,1.0,0.0,0.0,1,1
+Qwen/Qwen3-235B-A22B-Instruct-2507,german_faq,12,0.0,0.0,1.0,0.0,1,1
+Qwen/Qwen3-235B-A22B-Instruct-2507,privacy_why,2,0.0,0.0,1.0,0.0,1,1
+Qwen/Qwen3-235B-A22B-Instruct-2507,visiting_hours,12,0.0,0.667,0.333,0.0,1,1
+Qwen/Qwen3-30B-A3B-Instruct-2507,discharge_letter,2,0.0,0.0,1.0,0.0,1,1
+Qwen/Qwen3-30B-A3B-Instruct-2507,german_faq,12,0.0,0.0,1.0,1.0,1,1
+Qwen/Qwen3-30B-A3B-Instruct-2507,privacy_why,2,0.0,0.0,1.0,0.0,1,1
+Qwen/Qwen3-30B-A3B-Instruct-2507,visiting_hours,12,0.0,0.167,0.833,0.0,1,1
+deepseek-ai/DeepSeek-V4-Pro-0813,discharge_letter,2,0.0,0.0,1.0,0.0,1,1
+deepseek-ai/DeepSeek-V4-Pro-0813,german_faq,12,0.0,0.0,1.0,0.0,1,1
+deepseek-ai/DeepSeek-V4-Pro-0813,privacy_why,2,0.0,0.0,1.0,0.0,1,1
+deepseek-ai/DeepSeek-V4-Pro-0813,visiting_hours,12,0.0,1.0,0.0,0.0,1,1
+openai/gpt-oss-120b,discharge_letter,2,0.0,0.0,1.0,0.0,1,1
+openai/gpt-oss-120b,german_faq,12,0.0,0.0,1.0,0.333,1,1
+openai/gpt-oss-120b,privacy_why,2,0.0,0.0,1.0,0.0,1,1
+openai/gpt-oss-120b,visiting_hours,12,0.0,0.0,1.0,0.0,1,1

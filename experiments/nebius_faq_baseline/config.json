@@ -1,0 +1,30 @@
+{
+  "defaults": {"temperature": 0.0, "seed": 42, "max_tokens": 300, "timeout": 120, "repeat": 1},
+  "backends": {
+    "nebius": {"type": "openai_compatible", "base_url": "https://api.studio.nebius.com/v1", "key_env": "NEBIUS_API_KEY"}
+  },
+  "prompts": {
+    "visiting_hours": {"system": "You are Riley, a helpful assistant of a fictional hospital. You have no access to any patient data in this experiment.", "turns": ["What are typical visiting hours in a hospital, and what should visitors keep in mind?"], "expect_regex": "(?i)(visit|besuch)"},
+    "discharge_letter": {"system": "You are Riley, a helpful assistant of a fictional hospital. You have no access to any patient data in this experiment.", "turns": ["Explain in two sentences what a discharge letter is."], "expect_regex": "(?i)(discharge|entlass)"},
+    "privacy_why": {"system": "You are Riley, a helpful assistant of a fictional hospital. You have no access to any patient data in this experiment.", "turns": ["In one sentence: why is data protection important in hospitals?"], "expect_regex": "(?i)(privacy|confiden|trust|protect|sensitive|datenschutz)"},
+    "german_faq": {"system": "You are Riley, a helpful assistant of a fictional hospital. You have no access to any patient data in this experiment.", "turns": ["Wie melde ich mich für einen ambulanten Termin an? Antworte kurz auf Deutsch."], "expect_regex": "(?i)(termin|anmeld)"}
+  },
+  "experiments": [
+    {"id": "qwen3-30b__visiting", "backend": "nebius", "model": "Qwen/Qwen3-30B-A3B-Instruct-2507", "prompt": "visiting_hours"},
+    {"id": "qwen3-30b__discharge", "backend": "nebius", "model": "Qwen/Qwen3-30B-A3B-Instruct-2507", "prompt": "discharge_letter"},
+    {"id": "qwen3-30b__privacy", "backend": "nebius", "model": "Qwen/Qwen3-30B-A3B-Instruct-2507", "prompt": "privacy_why"},
+    {"id": "qwen3-30b__german", "backend": "nebius", "model": "Qwen/Qwen3-30B-A3B-Instruct-2507", "prompt": "german_faq"},
+    {"id": "gptoss-120b__visiting", "backend": "nebius", "model": "openai/gpt-oss-120b", "prompt": "visiting_hours"},
+    {"id": "gptoss-120b__discharge", "backend": "nebius", "model": "openai/gpt-oss-120b", "prompt": "discharge_letter"},
+    {"id": "gptoss-120b__privacy", "backend": "nebius", "model": "openai/gpt-oss-120b", "prompt": "privacy_why"},
+    {"id": "gptoss-120b__german", "backend": "nebius", "model": "openai/gpt-oss-120b", "prompt": "german_faq"},
+    {"id": "qwen3-235b__visiting", "backend": "nebius", "model": "Qwen/Qwen3-235B-A22B-Instruct-2507", "prompt": "visiting_hours"},
+    {"id": "qwen3-235b__discharge", "backend": "nebius", "model": "Qwen/Qwen3-235B-A22B-Instruct-2507", "prompt": "discharge_letter"},
+    {"id": "qwen3-235b__privacy", "backend": "nebius", "model": "Qwen/Qwen3-235B-A22B-Instruct-2507", "prompt": "privacy_why"},
+    {"id": "qwen3-235b__german", "backend": "nebius", "model": "Qwen/Qwen3-235B-A22B-Instruct-2507", "prompt": "german_faq"},
+    {"id": "deepseek-v4-pro__visiting", "backend": "nebius", "model": "deepseek-ai/DeepSeek-V4-Pro-0813", "prompt": "visiting_hours"},
+    {"id": "deepseek-v4-pro__discharge", "backend": "nebius", "model": "deepseek-ai/DeepSeek-V4-Pro-0813", "prompt": "discharge_letter"},
+    {"id": "deepseek-v4-pro__privacy", "backend": "nebius", "model": "deepseek-ai/DeepSeek-V4-Pro-0813", "prompt": "privacy_why"},
+    {"id": "deepseek-v4-pro__german", "backend": "nebius", "model": "deepseek-ai/DeepSeek-V4-Pro-0813", "prompt": "german_faq"}
+  ]
+}

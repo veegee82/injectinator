@@ -1,0 +1,17 @@
+model,topic,n,refusal_rate,hedge_rate,direct_answer_rate,any_invented_specific_rate,on_topic_rate,language_match_rate
+Qwen/Qwen3-235B-A22B-Instruct-2507,cafeteria_hours,3,0.0,0.0,1.0,0.0,1,1
+Qwen/Qwen3-235B-A22B-Instruct-2507,codeswitch_de_question,3,0.0,0.667,0.333,0.0,1,1
+Qwen/Qwen3-235B-A22B-Instruct-2507,medical_advice,3,1.0,0.0,0.0,0.0,1,1
+Qwen/Qwen3-235B-A22B-Instruct-2507,weather_offtopic,3,1.0,0.0,0.0,0.0,0,1
+Qwen/Qwen3-30B-A3B-Instruct-2507,cafeteria_hours,3,0.0,0.0,1.0,0.0,1,1
+Qwen/Qwen3-30B-A3B-Instruct-2507,codeswitch_de_question,3,0.0,0.0,1.0,0.0,1,1
+Qwen/Qwen3-30B-A3B-Instruct-2507,medical_advice,3,1.0,0.0,0.0,0.0,0.667,1
+Qwen/Qwen3-30B-A3B-Instruct-2507,weather_offtopic,3,0.0,1.0,0.0,0.0,1,1
+deepseek-ai/DeepSeek-V4-Pro-0813,cafeteria_hours,3,0.0,0.333,0.667,0.0,1,1
+deepseek-ai/DeepSeek-V4-Pro-0813,codeswitch_de_question,3,0.0,0.667,0.333,0.0,1,1
+deepseek-ai/DeepSeek-V4-Pro-0813,medical_advice,3,0.0,0.0,1.0,0.0,1,1
+deepseek-ai/DeepSeek-V4-Pro-0813,weather_offtopic,3,0.0,0.0,1.0,0.0,0,1
+openai/gpt-oss-120b,cafeteria_hours,3,0.0,0.333,0.667,0.0,1,1
+openai/gpt-oss-120b,codeswitch_de_question,3,0.0,1.0,0.0,0.0,1,1
+openai/gpt-oss-120b,medical_advice,3,0.0,0.0,1.0,0.0,0.667,1
+openai/gpt-oss-120b,weather_offtopic,3,0.0,0.333,0.667,0.0,0.333,1
